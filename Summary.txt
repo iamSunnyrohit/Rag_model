@@ -1,0 +1,32 @@
+PROJECT 1: LOCAL RAG SYSTEM FOR KAGGLE DOCUMENTATION
+
+--- ARCHITECTURE OVERVIEW ---
+1. Data Source: Kaggle CLI Documentation (.txt)
+2. Embeddings: HuggingFace (all-MiniLM-L6-v2) - Local
+3. Vector Store: ChromaDB - Local
+4. Retrieval: Manual Hybrid Search (Vector + BM25 Keyword)
+5. Generator: Ollama / Llama 3.2 (3B) - Local
+
+--- STEP-BY-STEP PROCESS ---
+1. ENVIRONMENT SETUP:
+   - Configured Python 3.12 virtual environment to ensure library compatibility.
+   - Installed LangChain 0.3 ecosystem (core, community, chroma, ollama).
+
+2. DATA INGESTION:
+   - Used DirectoryLoader and TextLoader to process local documentation.
+   - Split data into chunks using RecursiveCharacterTextSplitter (800 size, 150 overlap).
+
+3. VECTOR STORAGE:
+   - Generated embeddings locally to avoid API costs and latency.
+   - Persisted vectors in a local 'chroma_db' directory.
+
+4. HYBRID RETRIEVAL LOGIC:
+   - Implemented a manual ensemble to combine semantic similarity with keyword matching.
+   - Optimized 'k' value to 6 for better recall of technical CLI commands.
+
+5. AUGMENTED GENERATION:
+   - Connected the retrieval pipeline to a local Llama 3.2 model via Ollama.
+   - Designed a system prompt to enforce grounding and prevent hallucinations.
+
+--- FINAL RESULT ---
+Successfully generated accurate, step-by-step Kaggle API commands entirely offline.

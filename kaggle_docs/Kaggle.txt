@@ -1,0 +1,1320 @@
+How to Use Kaggle
+ 
+Competitions
+Find challenges for every interest level
+________________________________________
+Types of Competitions
+Kaggle Competitions are designed to provide challenges for competitors at all different stages of their machine learning careers. As a result, they are very diverse, with a range of broad types.
+Featured
+Featured competitions are the types of competitions that Kaggle is probably best known for. These are full-scale machine learning challenges which pose difficult, generally commercially-purposed prediction problems. For example, past featured competitions have included:
+•	Allstate Claim Prediction Challenge - Use customers’ shopping history to predict which insurance policy they purchase
+•	Jigsaw Toxic Comment Classification Challenge - Predict the existence and type of toxic comments on Wikipedia
+•	Zillow Prize - Build a machine learning algorithm that can challenge Zestimates, the Zillow real estate price estimation algorithm
+Featured competitions attract some of the most formidable experts, and offer prize pools going as high as a million dollars. However, they remain accessible to anyone and everyone. Whether you’re an expert in the field or a complete novice, featured competitions are a valuable opportunity to learn skills and techniques from the very best in the field.
+Research
+Research competitions are another common type of competition on Kaggle. Research competitions feature problems which are more experimental than featured competition problems. For example, some past research competitions have included:
+•	Google Landmark Retrieval Challenge - Given an image, can you find all the same landmarks in a dataset?
+•	Right Whale Recognition - Identify endangered right whales in aerial photographs
+•	Large Scale Hierarchical Text Classification - Classify Wikipedia documents into one of ~300,000 categories
+Research competitions do not usually offer prizes or points due to their experimental nature. But they offer an opportunity to work on problems which may not have a clean or easy solution and which are integral to a specific domain or area in a slightly less competitive environment.
+Getting Started
+Getting Started competitions are the easiest, most approachable competitions on Kaggle. These are semi-permanent competitions that are meant to be used by new users just getting their foot in the door in the field of machine learning. They offer no prizes or points. Because of their long-running nature, Getting Started competitions are perhaps the most heavily tutorialized problems in machine learning - just what a newcomer needs to get started!
+•	Digit Recognizer
+•	Titanic: Machine Learning from Disaster - Predict survival on the Titanic
+•	Housing Prices: Advanced Regression Techniques
+Getting Started competitions have two-month rolling leaderboards. Once a submission is more than two months old, it is automatically invalidated and no longer counts towards the leaderboard. Similarly, your team will drop from the leaderboard if all its submissions are older than two months. This gives new Kagglers the opportunity to see how their scores stack up against a cohort of competitors, rather than many tens of thousands of users. If your team is removed from a Getting Started competition due to the rolling expiry and wishes to rejoin, creating a new submission will cause it to show again on the leaderboard.
+Additionally, the Kaggle Learn platform has several tracks for beginners interested in free hands-on data science learning from pandas to deep learning. Lessons within a track are separated into easily digestible chunks and contain Notebook exercises for you to practise building models and new techniques. You’ll learn all the skills you need to dive into Kaggle Competitions.
+Playground
+Playground competitions are a “for fun” type of Kaggle competition that is one step above Getting Started in difficulty. These are competitions which often provide relatively simple machine learning tasks, and are similarly targeted at newcomers or Kagglers interested in practicing a new type of problem in a lower-stakes setting. Prizes range from kudos to small cash prizes. Some examples of Playground competitions are:
+•	Dogs versus Cats - Create an algorithm to distinguish dogs from cats
+•	Leaf Classification - Can you see the random forest for the leaves?
+•	New York City Taxi Trip Duration - Share code and data to improve ride time predictions
+________________________________________
+Competition Formats
+In addition to the different categories of competitions (e.g., “featured”), there are also a handful of different formats competitions are run in.
+Simple Competitions
+Simple (or “classic”) competitions are those which follow the standard Kaggle format. In a simple competition, users can access the complete datasets at the beginning of the competition, after accepting the competition’s rules. As a competitor you will download the data, build models on it locally or in Notebooks, generate a prediction file, then upload your predictions as a submission on Kaggle. By far most competitions on Kaggle follow this format.
+One example of a simple competition is the Porto Seguro Safe Driver Prediction Competition.
+Two-stage Competitions
+In two-stage competitions the challenge is split into two parts: Stage 1 and Stage 2, with the second stage building on the results teams achieved in Stage 1. Stage 2 involves a new test dataset that is released at the start of the stage. Eligibility for Stage 2 typically requires making a submission in Stage 1. In two-stage competitions, it’s especially important to read and understand the competition’s specific rules and timeline.
+One example of such a competition is the Nature Conservancy Fisheries Monitoring Competition.
+Code Competitions
+Some competitions are code competitions. In these competitions all submissions are made from inside of a Kaggle Notebook, and it is not possible to upload submissions to the Competition directly.
+These competitions have two attractive features. The competition is more balanced, as all users have the same hardware allowances. And the winning models tend to be far simpler than the winning models in other competitions, as they must be made to run within the compute constraints imposed by the platform.
+Code competitions are configured with their own unique constraints on the Notebooks you can submit. These may be restricted by characteristics like: CPU or GPU runtime, ability to use external data, and access to the internet. To learn the constraints you must adhere to, review the Requirements for that specific competition.
+An example of a code competition is Quora Insincere Questions Classification.
+Code Competition FAQ
+I'm getting errors when submitting. What should I do?
+1. Please see our page on code competition debugging for tips on understanding and preventing submission errors.
+1. First you'll need to write a Notebook which reads the Competition's dataset and makes predictions on the test set. Specifically, have your Notebook write your predictions to a "submission file", which is typically a submission.csv file, though some competitions have special formats. See the competition's Evaluation page, or look for sample_submission.csv (or similar) in the Data page for more information on the expected name and format of your submission file.
+2. Save a full version of your Notebook by clicking "Save Version" and selecting "Save & Run All". This saves your code, runs it, and creates a version of the code and output. Once your save finishes, navigate to the Viewer page for your new Notebook Version.
+3. In the Notebook Viewer, navigate to the Output section, find and select the submission file you created, and click the "Submit" button.
+Can I upload external data?
+Some competitions allow external data and some do not. If a competition allows external data, you can attach it to your Notebook by adding it as a data source. If a competition does not allow external data, attaching it to your Notebook will deactivate the "Submit" button on the associated saved version.
+What are the compute limits of Notebooks?
+The compute limits of the Notebooks workers are subject to change. You can view the site-wide memory, CPU, runtime limits, and other limits from the editor.
+Code competitions come in many shapes and sizes, and will often impose limits specific to a competition. You should view the competition description to understand if these limits are activated and what they are. Example variations include:
+- Specific runtime limits
+- Specific limits that apply to Notebooks using GPUs
+- Internet access allowed or disallowed
+- External data allowed or disallowed
+- Custom package installs allowed or disallowed
+- Submission file naming expectations
+How do I team up in a code competition?
+All the competitions setup is the same as normal competitions, except that submissions are only made through Notebooks. To team up, go to the "Team" tab and invite others.
+How will winners be determined?
+In some code competitions, winners will be determined by re-running selected submissions’ associated Notebooks on a private test set.
+In such competitions, you will create your models in Notebooks and make submissions based on the test set provided on the Data page. You will make submissions from your Notebook using the above steps and select submissions for final judging from the “My Submissions” page, in the same manner as a regular competition.
+Following the competition deadline, your code will be rerun by Kaggle on a private test set that is not provided to you. Your model's score against this private test set will determine your ranking on the private leaderboard and final standing in the competition.
+________________________________________
+Joining a Competition
+Kaggle runs a variety of different kinds of competitions, each featuring problems from different domains and having different difficulties. Before you start, navigate to the Competitions listing. It lists all of the currently active competitions.
+Public competitions are viewable on Kaggle and appear in Kaggle search results. Depending on the privacy and access set by the host, some competitions may be unavailble for you to see or join. If a host set a competition's visibility to private, you would only see the competition's details if they shared a unique URL with you.
+If you click on a specific Competition in the listing, you will go to the Competition’s homepage.
+The first element worth calling out is the Rules tab. This contains the rules that govern your participation in the sponsor’s competition. You must accept the competition’s rules before downloading the data or making any submissions. It’s extremely important to read the rules before you start. This is doubly true if you are a new user. Users who do not abide by the rules may have their submissions invalidated at the end of the competition or banned from the platform. So please make sure to read and understand the rules before choosing to participate.
+If anything is unclear or you have a question about participating, the competition’s forums are the perfect place to ask.
+The information provided in the Overview tabs will vary from Competition to Competition. Five elements which are almost always included and should be reviewed are the “Description,” “Data”, “Evaluation,” “Timeline,” & “Prizes” sections.
+The description gives an introduction into the competition’s objective and the sponsor’s goal in hosting it.
+The data tab is where you can download and learn more about the data used in the competition. You’ll use a training set to train models and a test set for which you’ll need to make your predictions. In most cases, the data or a subset of it is also accessible in Notebooks.
+The evaluation section describes how to format your submission file and how your submissions will be evaluated. Each competition employs a metric that serves as the objective measure for how competitors are ranked on the leaderboard.
+The timeline has detailed information on the competition timeline. Most Kaggle Competitions include, at a minimum, two deadlines: a rules acceptance deadline (after which point no new teams can join or merge in the competition), and a submission deadline (after which no new submissions will be accepted). It is very, very important to keep these deadlines in mind.
+The prizes section provides a breakdown of what prizes will be awarded to the winners, if prizes are relevant. This may come in the form of monetary, swag, or other perks. In addition to prizes, competitions may also award ranking points towards the Kaggle progression system. This is shown on the Overview page.
+Ready to join? If the competition allows anyone to join, you should be able to click "Join" and accept the competition's rules. If the competition has restricted access, the host will share a private link with you that allows you to join.
+Once you have chosen a competition, read and accepted the rules, and made yourself aware of the competition deadlines, you are ready to submit!
+________________________________________
+Forming a Team
+Everyone that competes in a Competition does so as a team. A team is a group of one or more users who collaborate on the competition. Joining a team of other users around the same level as you in machine learning is a great way to learn new things, combine your different approaches, and generally improve your overall score.
+It’s important to keep in mind that team size does not affect the limit on how many submissions you may make to a competition per day: whether you are a team of one or a team of five, you will have the same daily submission limit.
+When you accept the rules and join a Competition, you automatically do so as part of a new team consisting solely of yourself. You can then adjust your team settings in various ways by visiting the “Team” tab on the Competition page:
+ 
+You can perform a number of different team-related actions on this tab.
+Types of Team Memberships
+There are two team membership statuses. One person serves as the Team Leader. They are the primary point of contact when we need to communicate with a team, and also have some additional team modification privileges (to be discussed shortly). Every other person in the team is a Member.
+If you are the Team Leader you will see a box next to every other team member’s name on the Team page that says “Make Leader”. You may click on this at any time to designate someone else on your team the Team Leader.
+Changing your Team Name
+The team name is distinct from the names of its members, even if the team only consists of a single person (yourself). You can always change your team name to something custom, and other users will see that custom name when they visit the competition leaderboard. Most teams customize their names!
+Anyone in the team can modify the team name by visiting the Team tab.
+Merging Teams
+You may invite another team to your team or, reciprocally, accept a merge request from another team. If you propose a merger, the merger can be accepted or rejected by the Team Leader of the other team. If you are proposed a merger, the Team Leader may choose to accept or reject it.
+There are some limits on when you can merge teams:
+•	Most competitions have a team merger deadline: a point in time by which all teams must be finalized. No mergers may occur after this date
+•	Some competitions specify a maximum team size; you will not be able to merge teams whose cumulative number of members exceeds this cap
+•	You will not be able to merge teams whose combined daily submission count exceeds the total submission limit to that date (daily limit x number of days).
+All of this can be managed through the Team tab.
+Disbanding a Team
+Choose your teammates wisely as only teams that have not made any submissions can be disbanded. This can be done through the Team tab
+________________________________________
+Making a Submission
+You will need to submit your model predictions in order to receive a score and a leaderboard position in a Competition. How you go about doing so depends on the format of the competition.
+Either way, remember that your team is limited to a certain number of submissions per day. This number is five, on average, but varies from competition to competition.
+Leaderboard
+One of the most important aspects of Kaggle Competitions is the Leaderboard. The Competition leaderboard has two parts.
+The public leaderboard provides publicly visible submission scores based on a representative sample of the test data. This leaderboard is visible throughout the competition.
+The private leaderboard, by contrast, tracks model performance using the remainder of the test data. The private leaderboard thus has final say on whose models are best, and hence, who the winners and losers of the Competition will be. Which subset of data is calculated on the private leaderboard or a submission’s performance on the private leaderboard is not released to users until the competition has been closed.
+Many users watch the public leaderboard closely, as breakthroughs in the competition are announced by score gains in the leaderboard. These jumps in turn motivate other teams working on the competition in search of those advancements. But it’s important to keep the public leaderboard in perspective. It’s very easy to overfit a model, creating something that performs very well on the public leaderboard, but very badly on the private one. This is called overfitting.
+In the event of an exact score tie, the tiebreaker is the team which submitted earlier. Kaggle always uses full precision when determining rankings, not just the truncated precision shown on the Leaderboard.
+Submitting Predictions
+Submitting by Uploading a File
+For most competitions, submitting predictions means uploading a set of predictions (known as a “submission file”) to Kaggle.
+Any competition which supports this submission style will have “Submit Predictions” and “My Submissions” buttons in the Competition homepage header.
+To submit a new prediction use the Submit Prediction button. This will open a modal that will allow you to upload your submission file. We will attempt to score this file, then add it to My Submissions once it is done being processed.
+Note that to count, your submission must first pass processing. If your submission fails during the processing step, it will not be counted and not receive a score; nor will it count against your daily submission limit. If you encounter problems with your submission file, your best course of action is to ask for advice on the Competition’s discussion forum.
+If you click on the My Submissions tab you will see a list of every submission you have ever made to this competition. You may also use this tab to select which submission file(s) to submit for scoring before the Competition closes. Your final score and placement at the end of the competition will be whichever selected submission performed best on the private leaderboard. If you do not select submission(s) to be scored before the competition closes, the platform will automatically select those which performed the highest on the public leaderboard, unless otherwise communicated in the competition.
+Submitting by Uploading from a Notebook
+In addition to our usual Competitions, Kaggle may also allow competition submissions from Kaggle Notebooks. Notebooks are an interactive in-browser code editing environment; to learn more about them, see the documentation sections on Notebooks.
+To build a model, start by initializing a new Notebook with the Competition Dataset as a data source. This is easily done by going to the “Notebooks” tab within a competition’s page and then clicking “New Notebook.” That competition’s dataset will automatically be used as the data source. New Notebooks will default as private but can be toggled to public or shared with individual users (for example, others on your team).
+Build your model and test its performance using the interactive editor. Once you are happy with your model, use it to generate a submission file within the Notebook, and write that submission file to disk in the default working directory (/kaggle/working). Then click "Save Version" and select "Save & Run All" to build a new Notebook version using your code.
+Once the new Notebook Version is done (it must run top-to-bottom within the Notebooks platform constraints), navigate to the Notebook Viewer page to see the execution results, then find and select your submission file in the Output section, and you should see a “Submit” button to submit it to the Competition.
+________________________________________
+Leakage
+What is Leakage?
+Data Leakage is the presence of unexpected additional information in the training data, allowing a model or machine learning algorithm to make unrealistically good predictions.
+Leakage is a pervasive challenge in applied machine learning, causing models to over-represent their generalization error and often rendering them useless in the real world. It can be caused by human or mechanical error, and can be intentional or unintentional in both cases.
+Some types of data leakage include:
+•	Leaking test data into the training data
+•	Leaking the correct prediction or ground truth into the test data
+•	Leaking of information from the future into the past
+•	Retaining proxies for removed variables a model is restricted from knowing
+•	Reversing of intentional obfuscation, randomization or anonymization
+•	Inclusion of data not present in the model’s operational environment
+•	Distorting information from samples outside of scope of the model’s intended use
+•	Any of the above present in third party data joined to the training set
+Examples
+One concrete example we’ve seen occurred in a dataset used to predict whether a patient had prostate cancer. Hidden among hundreds of variables in the training data was a variable named PROSSURG. It turned out this represented whether the patient had received prostate surgery, an incredibly predictive but out-of-scope value.
+The resulting model was highly predictive of whether the patient had prostate cancer but was useless for making predictions on new patients.
+This is an extreme example - many more instances of leakage occur in subtle and hard-to-detect ways. An early Kaggle competition, Link Prediction for Social Networks, makes a good case study in this.
+There was a sampling error in the script that created that dataset for the competition: a > sign instead of a >= sign meant that, when a candidate edge pair had a certain property, the edge pair was guaranteed to be true. A team exploited this leakage to take second in the competition.
+Furthermore, the winning team won not by using the best machine-learned model, but by scraping the underlying true social network and then defeated anonymization of the nodes with a very clever methodology.
+Outside of Kaggle, we’ve heard war stories of models with leakage running in production systems for years before the bugs in the data creation or model training scripts were detected.
+Leakage in Competitions
+Leakage is especially challenging in machine learning competitions. In normal situations, leaked information is typically only used accidentally. But in competitions, participants often find and intentionally exploit leakage where it is present.
+Participants may also leverage external data sources to provide more information on the ground truth. In fact, “the concept of identifying and harnessing leakage has been openly addressed as one of three key aspects for winning data mining competitions” (source paper).
+Identifying leakage beforehand and correcting for it is an important part of improving the definition of a machine learning problem. Many forms of leakage are subtle and are best detected by trying to extract features and train state-of-the-art models on the problem. This means that there are no guarantees that competitions will launch free of leakage, especially for Research competitions (which have minimal checks on the underlying data prior to launch).
+When leakage is found in a competition, there are many ways that we can address it. These may include:
+•	Let the competition continue as is (especially if the leakage only has a small impact)
+•	Remove the leakage from the set and relaunch the competition
+•	Generate a new test set that does not have the leakage present
+Updating the competitions isn’t possible in all cases. It would be better for the competition, the participants, and the hosts if leakage became public knowledge when it was discovered. This would help remove leakage as a competitive advantage and give the host more flexibility in addressing the issue.
+________________________________________
+Resources for Getting Started
+Getting Started
+•	The Getting Started Competitions are specifically targeted at new users getting their feet wet with Kaggle and/or machine learning:
+o	Binary classification: Titanic: Machine Learning from Disaster
+o	Regression: House Prices: Advanced Regression Techniques
+•	The Kaggle Learn platform has several tracks for beginners interested in free hands-on data science learning from pandas to deep learning. Lessons within a track are separated into easily digestible chunks and contain Notebook exercises for you to practise building models and new techniques hands-on. It is a great way to start deep diving into data science and quickly get familiar with the field!
+•	What Kaggle has learned from almost 2MM machine learning models on Youtube. This data.bythebay.io talk by Kaggle founder Anthony Goldbloom lays out what Kaggle competitions are all about.
+•	How to (almost) win at Kaggle on Youtube. In this talk competitor Kiri Nichols summarizes the appeal of Competitions as a data science learner.
+Discussion
+•	General Discussion: There are six general site Discussion Forums:
+o	Kaggle Forum: Events and topics specific to the Kaggle community
+o	Getting Started: The first stop for questions and discussion for new Kagglers
+o	Product Feedback: Tell us what you love, hate, or wish for
+o	Questions & Answers: Technical advice from other data scientists
+o	Datasets: Requests for and discussion of open data
+o	Learn: Questions, answers, and requests related to Kaggle Learn courses
+•	Competition Discussion Forums: No matter the competition you are participating in, you can count on plenty of active community members making posts to the forums. If you get stuck on a particular aspect of the problem, Discussions are a great place to ask questions.
+•	Competition Notebooks: Similar to Discussions, Notebooks shared within a competition are an excellent source of Exploratory Data Analyses (EDAs) & basic starter models which can be forked and built upon for applied learning.
+•	The Kaggle Noobs Slack channel: This Slack channel is a popular watering hole for general banter among Kaggle ML practitioners from Novice to Grandmaster.
+Techniques
+•	Public, reproducible code examples in Notebooks are a great way to learn and put to practice new techniques. Search for techniques in Notebooks by tag using the search syntax tag:classification. Fork Notebooks to make a copy of the code to modify and experiment with.
+•	The No Free Hunch blog. No Free Hunch is a great way of keeping up with goings-on on Kaggle. Many past Competitions winners have been interviewed about and presented their winning models on No Free Hunch. Here are some examples of past winner’s interviews:
+o	NOAA Right Whale Identification
+o	Instacart Market Basket Analysis, Winner’s Interview: 2nd place, Kazuki Onodera
+o	Two Sigma Financial Modeling Code Competition
+•	Various tutorials have been published on No Free Hunch:
+o	An Intuitive Introduction to Generative Adversarial Networks
+o	Introduction To Neural Networks
+o	A Kaggle Master Explains Gradient Boosting
+o	A Kaggler’s Guide to Model Stacking in Practice
+•	Marios Michailidis: How to become a Kaggle #1: An introduction to model stacking: In this Data Science Festival talk top Kaggler Marios Michailidis (Kasanova) explains model stacking, a key feature of winning competition models, in great detail.
+•	Kaggle Grandmaster Panel: A panel Q&A from H2O World 2017 featuring some top Kagglers.
+•	How to Win A Kaggle Competition - Learn From Top Kagglers: This Coursera course, put together by high-ranking Kagglers, going into great detail on the tools and techniques used by winning Competitions models.
+________________________________________
+Cheating
+Cheating is not taken lightly on Kaggle. We monitor our compliance account (the formal channel for reporting cheaters, or appealing a removal for cheating) during competitions. We also spend a considerable amount of time at the close of each competition to review suspicious activity and remove people who have violated the rules from the leaderboard. When we believe we have sufficient evidence, we take action through removal or possibly even an account ban.
+We also monitor and investigate moderation reports (plagiarism, voting rings, etc.) throughout the week, and take action as appropriate, which includes removing medals as well as full-out blocking accounts.
+If you believe you have evidence that suggests a team violated competition rules, please report it to the Competitions compliance account for a thorough investigation.
+
+
+
+Datasets
+Explore, analyze, and share quality data
+________________________________________
+Types of Datasets
+Kaggle supports a variety of dataset publication formats, but we strongly encourage dataset publishers to share their data in an accessible, non-proprietary format if possible. Not only are open, accessible data formats better supported on the platform, they are also easier to work with for more people regardless of their tools.
+This page describes the file formats that we recommend using when sharing data on Kaggle Datasets. Plus, learn why and how to make less well-supported file types as accessible as possible to the data science community.
+Supported File Types
+CSVs
+The simplest and best-supported file type available on Kaggle is the “Comma-Separated List”, or CSV, for tabular data. CSVs uploaded to Kaggle should have a header row consisting of human-readable field names. A CSV representation of a shopping list with a header row, for example, looks like this:
+id,type,quantity
+0,bananas,12
+1,apples,7
+CSVs are the most common of the file formats available on Kaggle and are the best choice for tabular data.
+On the Data tab of a dataset, a preview of the file’s contents is visible in the data explorer. This makes it significantly easier to understand the contents of a dataset, as it eliminates the need to open the data in a Notebook or download it locally.
+CSV files will also have associated column descriptions and column metadata. The column descriptions allows you to assign descriptions to individual columns of the dataset, making it easier for users to understand what each column means. Column metrics, meanwhile, present high-level metrics about individual columns in a graphic format.
+“The Complete Pokemon Dataset” is an example of a great CSV-type Dataset.
+JSON
+While CSV is the most common file format for “flat” data, JSON is the most common file format for “tree-like” data that potentially has multiple layers, like the branches on a tree:
+{[{‘id’: 0, ‘type’: ‘bananas’, ‘quantity’: 12}, {‘id’: 1, ‘type’: ‘apples’, ‘quantity’: 7}]}
+For JSON files, the Data tab preview will present an interactive tree with the nodes in the JSON file attached. You can click on individual keys to open and collapse sections of the tree, exploring the structure of the dataset as you go along. JSON files do not support column descriptions or metrics.
+You can filter the Datasets listing by File Type to show all datasets containing JSON files.
+SQLite
+Kaggle supports database files using the lightweight SQLite format. SQLite databases consist of multiple tables, each of which contains data in tabular format. These tables support large datasets better than CSV files do, but are otherwise similar in practice.
+The Data tab represents each table in a database separately. Like CSV files, SQLite tables will be fully populated by “Column Metadata” and “Column Metrics” sections.
+“European Soccer Database” is an example of a great SQLite-type Dataset.
+Archives
+Although not technically a file format per se, Kaggle also has first-class support for files compressed using the ZIP file format as well as other common archive formats like 7z.
+Compressed files take up less space on disk than uncompressed ones, making them significantly faster to upload to Kaggle and allowing you to upload datasets that would otherwise exceed the Dataset size limitations.
+Archives are uncompressed on our side so that their contents are accessible in Notebooks without requiring users to unzip them. Archives do not currently populate previews for individual file contents, but you can still browse the contents by file name.
+As a result, we recommend that you only upload your dataset as an archive if the dataset is large enough, is made up of many smaller files, or is organized into subfolders. For instance, ZIPs and other archive formats are a great choice for making image datasets available on Kaggle.
+“Chest X-Ray Images (Pneumonia)” is an example of a dataset made of archived images.
+BigQuery
+Kaggle also supports special BigQuery Datasets. BigQuery is a “big data” SQL store invented by Google. Many massive public datasets, like all the code in GitHub and the complete history of the Bitcoin blockchain, are available publically through the Google BigQuery Public Datasets initiative. Some of these are in turn also available as Kaggle Datasets!
+BigQuery Datasets are special in many ways. Because they are multi-terabyte datasets hosted on Google’s servers they cannot be uploaded or downloaded. Within Notebooks, instead of loading the files from disk, you interact with the dataset by writing SQL fetch queries within either the Google BigQuery Python library or Kaggle’s bq_helper library. And, due to the large size of the datasets involved, there is a quota of 5 TB of data scanned per user per 30-days.
+Some resources for understanding how to use BigQuery:
+•	Getting Started with Big Query
+•	Beyond Queries: Exploring the Bigquery API
+“USA Names Data” is an example of a BigQuery-type Dataset. Here are some helpful Notebooks for learning more about BigQuery: “SQL Scavenger Hunt Handbook, Getting Started with BigQuery”, and “Beyond Queries: Exploring the BigQuery API”.
+Other File Formats
+The file formats listed in the section above are the ones best supported and most common on the Kaggle format. This doesn’t mean that other types of files can’t be uploaded; any file you can think of can be uploaded. Other formats are just less well-supported: they may not have previews or any of the other data explorer components available. They will also likely be less familiar with Kaggle users, and hence, less accessible.
+If you can convert your file into one of the formats above (the simpler the better), we highly recommend doing so. For example, Excel spreadsheets are a proprietary format that should be uploaded as CSV files instead. Your users will thank you!
+However, there are nevertheless use cases for alternative data formats. We do encourage uploads in speciality data formats like NPZ, image file formats like PNG, and complex hierarchical data formats like HDF5. But, when doing so, we suggest also uploading a Notebook discussing what and where the files are, how to work with them, and demonstrating how to get started with the dataset. Reproducible code samples can go a long way towards making your data files accessible to the data science world!
+________________________________________
+Searching for Datasets
+Datasets is not just a simple data repository. Each dataset is a community where you can discuss data, discover public code and techniques, and create your own projects in Notebooks. You can find many different interesting datasets of all shapes and sizes if you take the time to look around and find them!
+The latest and greatest from Datasets is surfaced on Kaggle in several different places.
+Newsfeed
+When you’re logged into your Kaggle account, the Kaggle homepage provides a live newsfeed of what people are doing on the platform. New Datasets uploaded by people you follow and hot Datasets with lots of activity will show up here. By browsing down the page you can check out all the latest updates from your fellow Kagglers.
+You can tweak your news feed to your liking by following other Kagglers. To follow someone, go to their profile page and click on “Follow User”. Content posted and upvotes made by users you have followed will show up more prominently.
+The same is true of other users who choose to follow you. Post high-quality content and you will soon find other users following along with what you are doing!
+Datasets Listing
+A more structured way of accessing datasets is accessible from the “Datasets” tab in the main menu bar.
+Datasets are grouped by different categories: "Trending Datasets", "Popular Datasets", "Recently Viewed Datasets" and a few other rotating categories.
+At the bottom of this page, you can click on the "Explore all public datasets" button to get a list view of all datasets. The list is sorted by “Hotness” by default. “Hotness” is what it sounds like: a way of measuring the interestingness and recency of datasets on the platform. Datasets which score highly in Hotness, and thus appear highly in this list, are usually either recently released Datasets that have been marked Reviewed and are scoring highly in engagement, or “all-time” greats that have been consistently popular on the platform for a long time.
+Other methods of sorting are by Most Votes, New, Updated and Usability.
+Other filtering options, available from the navigation bar, are Sizes (Small, Medium, or Large), File types (CSV, SQLite, JSON, BigQuery), Licenses (Creative Commons, GPL, Other Database, Other), and Tags (described in the next section).
+You can also use the listing to view your own Datasets (“Your Datasets”), or to look at datasets you have previously bookmarked ("Bookmarks").
+Finally, a Datasets-specific search bar is available here. This is often the fastest way to find a specific dataset that you are looking for.
+Tags and Tag Pages
+Tags are the most advanced of the searching options available in the Datasets listing page. Tags are added by dataset owners to indicate the topic of the Dataset, techniques you can use (e.g., “classification”), or the type of the data itself (e.g., “text data”). You can navigate to tag pages to browse more content sharing a tag either by clicking on a tag on a Dataset, or by clicking on the “Tags” dropdown in the site header.
+Searching by tags allow you to search for Datasets by topical area. For example, if you are interested in animal shelter data you might try a search with the tag “animals”; if you are interested in police records a search with “crime” would do the trick.
+Tag pages include a section listing the most popular pages with the given tag, making them a great way of searching for datasets by content.
+________________________________________
+Creating a Dataset
+It’s easy to create a dataset on Kaggle and doing so is a great way to start a data science portfolio, share reproducible research, or work with collaborators on a project for work or school. You have the option to create private datasets to work solo or with invited collaborators or publish a dataset publicly to Kaggle for anyone to view, download, and analyze.
+Navigating the Dataset Interface
+To publish a private or public dataset, start by navigating to the Datasets listing. There you will find a New Dataset button. Click on it to open the New Dataset modal.
+The required “bare minimum” fields for uploading a dataset to Kaggle in descending order are:
+•	The Title is the name of the Dataset – e.g. what will appear in the listing when searching or browsing.
+•	The URL is the link the Dataset will live at. The slug will first auto-populate and mimic your Title. However, you can hover over the slug to change it right away.
+•	Finally, you may upload data from one of four sources:
+o	Your local machine - upload files/folders via drag and drop or by selecting them in your file browser. To speed up file/folder uploads, try uploading them as a ZIP archive; the contents will be unzipped on our side to make them accessible in Notebooks.
+o	Remote Files - enter list of public URL(s) which identify files to be imported into dataset
+o	Github Repository - enter URL to github repository whose files will be imported into dataset
+o	Notebook Outputs - use inbuilt search to explore publicly available files produced from Kaggle’s large repository of public Notebooks
+To make your dataset more useful for your collaborators and the community it is recommended you update the following settings:
+•	The Sharing menu controls the Dataset’s visibility. Datasets may be Private (visible only to you and your collaborators, and to Kaggle for purposes consistent with the Kaggle Privacy Policy) or Public (visible to everyone). The default setting is Private.
+•	The Licence is the license the dataset is released under (relevant for public datasets). If the license you need doesn’t appear in the dropdown, select the “Other (specified in description)” option and be sure to provide information on the license when writing the dataset description (in the next step). Below is a list of common licenses.
+Common Licenses
+o	Creative Commons
+o	CC0: Public Domain
+o	CC BY-NC-SA 4.0
+o	CC BY-SA 4.0
+o	CC BY-SA 3.0
+o	CC BY 4.0 (Attribution 4.0 International)
+o	CC BY-NC 4.0 (Attribution-NonCommercial 4.0 International)
+o	CC BY 3.0 (Attribution 3.0 Unported)
+o	CC BY 3.0 IGO (Attribution 3.0 IGO)
+o	CC BY-NC-SA 3.0 IGO (Attribution-NonCommercial-ShareAlike 3.0 IGO)
+o	CC BY-ND 4.0 (Attribution-NoDerivatives 4.0 International)
+o	CC BY-NC-ND 4.0 (Attribution-NonCommercial-NoDerivatives 4.0 International)
+o	GPL
+o	GPL 2
+o	LGPL 3.0 (GNU Lesser General Public License 3.0)
+o	AGPL 3.0 (GNU Affero General Public License 3.0)
+o	FDL 1.3 (GNU Free Documentation License 1.3)
+o	Open Data Commons
+o	Database: Open Database, Contents: Database Contents
+o	Database: Open Database, Contents: © Original Authors
+o	PDDL (ODC Public Domain Dedication and Licence)
+o	ODC-BY 1.0 (ODC Attribution License)
+o	Community Data License
+o	Community Data License Agreement - Permissive - Version 1.0
+o	Community Data License Agreement - Sharing - Version 1.0
+o	Special
+o	World Bank Dataset Terms of Use
+o	Reddit API Terms
+o	U.S. Government Works
+o	EU ODP Legal Notice
+•	Owner allows you to specify the dataset Owner if you belong to any Organizations. You may assign ownership to yourself or to any Organizations you are a member of (see the section “Creating and using organizations” to learn more about this feature).
+Once you have provided the required information alongside your data source, click on “Create Dataset” and your dataset will start processing. Once the dataset is finished processing, you will be taken to your new dataset’s home page.
+Note that if your dataset is very large (multiple gigabytes in size), processing may take a while, up to several minutes. Feel free to navigate away from the browser window whilst processing is inflight as it will continue in the background.
+Your datasets has now been created! However, for truly great Datasets, the work doesn’t stop there. Once you have specified the required fields there are a few other things you should do in order to maximize your dataset’s usefulness to the community or your collaborators:
+•	Upload a cover image. We recommend using unsplash.com for shareable, high resolution images.
+•	Add a subtitle to the dataset. This is a short bit of text explaining in slightly more detail what is in it. This subtitle will appear alongside the title in the search listings.
+•	Add tags. Tags help users find datasets on topics they are interested in by making them easier to find.
+•	Add a description. The description should explain what the dataset is about in long-form text. A great description is extremely useful to Kaggle community members looking to get started with your data.
+•	Publish a public Notebook. Use Notebooks to show community members or your collaborators how to get started with the data. This can be something simple like an exploratory data analysis or a more complex project reproducing research using the data.
+A few examples of well-formatted datasets are “CS:GO Competitive Matchmaking Data”, “Yelp Dataset”, “1.6 million UK traffic accidents”, and “Fashion MNIST”.
+Creating Datasets from Various Connectors
+As outlined above, in addition to uploading files from your local machine, you can also create Datasets from various data sources including GitHub, remote URLs (any public file hosted on the web), and Notebook output files. These are each icons that can be found in the Dataset Upload Modal sidebar.
+GitHub and Remote File Datasets
+Datasets created from a GitHub repository or hosted (remote) files are downloaded directly from the remote server to Kaggle’s cloud storage and, therefore, will consume none of your local network’s bandwidth. This makes the remote files connector a convenient solution for creating datasets from large files.
+When a dataset is created from a github repository or hosted file, the publisher is able to set up automatic interval updates from the dataset’s Settings tab. Here’s an example stock market dataset that updates daily.
+Don’t want to wait for a refresh? No problem! Click the Update button within the "..." dropdown in the dataset menu header to sync your dataset immediately.
+Notebook Output File Datasets
+Creating a dataset from a Notebook’s output files will let you create reproducible data pipelines. To create a dataset from a Notebook’s output files, click on the icon in the uploader and search for your Notebook. Alternatively, you can click “Create Dataset” from the Output tab on your rendered Notebook. Then, select the files you want to use in your dataset.
+Limitations
+It's worth noting that for user experience and technical simplicity, a dataset can be created and versioned from exclusively one data source. That is, data sources currently can not be mixed and matched in any given dataset (for example, a dataset created from a GitHub repository can't also include files uploaded from your local machine). If you would like to use various different data sources in a Notebook you can create multiple datasets and add them both to said Notebook.
+The usual technical specifications for dataset creation apply to connectors too. See the Technical Specifications section for more information.
+Updating Dataset Using JSON Config
+For advanced users, you may find it easier to update key parameters of your dataset by specifying the details as JSON configuration. To do this, navigate to your dataset and click Settings, followed by “JSON Config” in the menu of options on the left.
+You can update any of the settings you would normally edit through the datasets user interface, such as title, collaborators, licenses, keywords and more. For a reference to the schema you can use for updating dataset settings, you can look at our documentation for the relevant actions within the Public API.
+Please note, there are some subtle differences between the Public API schema and the schema supported in the JSON Config settings UI. They are as follows:
+•	id is omitted as it cannot be changed after dataset creation
+•	resources is omitted as you cannot change the uploaded files using this UI
+•	The isPrivate is an added boolean option that allows users to change the privacy of their datasets (note: public datasets can NOT be made private)
+•	collaborators is an added array of objects with shape { “username”: string; “role”: “read” | “write”} that can be used to specify dataset collaborators
+________________________________________
+Collaborating on Datasets
+Dataset collaboration is a powerful feature. It allows multiple users to co-own and co-maintain a private or publicly shared dataset. For example, you can invite collaborators to view and edit a private dataset to work together on preparing it before changing its visibility to public.
+When uploading a Dataset you may choose either yourself or any Organization you are a part of as the Owner of that Dataset. If you select yourself, that Dataset will be created with yourself as the Owner. If you select an Organization, that Organization will be the Owner of the dataset, and every other user in the Organization (including yourself) will be added as a Collaborator with editing privileges (if you are unfamiliar with Organizations, you may also want to read the section “Creating and using organizations”).
+This means that Organizations are an easy way to manage access to datasets or groups of datasets.
+Inviting Collaborators
+Alternatively, you may manage Collaborators directly. To do so, go to any dataset you own and navigate to Settings > Sharing. There, use the search box to find and add other users as Dataset collaborators.
+If your Dataset is private, you may choose between giving Collaborators either viewing privileges (“Can view”) or editing privileges (“Can edit”). If your Dataset is public, Collaborators can only be added with editing privileges (“Can edit”), as anyone can view it already.
+When you add a collaborator, they will receive a notification via email.
+“Data Science for Good: Kiva Crowdfunding” is a great example of a Collaborative Dataset.
+Using Notebooks with Dataset Collaborators
+Using Notebooks, Kaggle’s interactive code editing and execution environment, is a powerful way to work with your collaborators on a Dataset. You might want to work with collaborators to write public Notebooks that help familiarize other users with your dataset. Or you may want to keep all of your code private among your collaborators as you work on privately shared projects together.
+Notebooks you create are private by default, and their sharing settings are distinct from the sharing settings on your Dataset. That is, your Dataset collaborators won’t automatically see your private Notebooks. Here’s what that means and how you can productively use sharing settings on Datasets and Notebooks together:
+•	You can make public Notebooks on a private Dataset which will allow anyone to view your Notebook, but not the underlying private data source.
+•	If you want to add view or edit collaborators to a private Notebook (whether the dataset is private or public), you can do so by adding users via Options > Sharing on the Notebook.
+________________________________________
+Resources for Starting a Data Project
+There are many resources available online to help you get started working on your open data project.
+Using Datasets
+•	Getting Started on Kaggle video tutorials: Just started on Kaggle? Not sure what is where and why? Here are our very own Kaggle team tutorials to orient you quickly on navigating the Kaggle platform and creating your own datasets and Notebooks
+•	A Guide to Open Data Publishing: This article includes the key ingredients to an open data project.
+•	Web scraping data in Python: A tutorial showing you how to scrape data with BeautifulSoup. It goes over the same code used to create the Craft Beers dataset published on Kaggle.
+•	Making Kaggle the Home of Open Data: Ben’s post shares instructions for publishing your open data project on Kaggle and how you can explore others’ datasets.
+•	Creating an Organization: If you’re publishing data from an organization, you can create an organization profile first. Then you just select the organization profile from the dropdown near your avatar when publishing (https://www.kaggle.com/datasets/new).
+•	Open Data Spotlights: This series highlights some of the best open data projects on Kaggle.
+•	Have requests or want to discuss data collection, cleaning, or other aspects of open data projects? Post away in the Datasets Discussion forum on Kaggle.
+Using Notebooks
+•	Getting Started on Kaggle video tutorials: Just started on Kaggle? Not sure what is where and why? Here are our very own Kaggle team tutorials to orient you quickly on navigating the Kaggle platform and creating your own datasets and Notebooks
+•	Kaggle Learn is a great place to start getting hands on with data science and machine learning techniques using Notebooks.
+•	Does open data make you happy? An introduction to Kaggle Notebooks: Learn how to use Notebooks to explore any combination of datasets published on Kaggle.
+•	Seventeen Ways to Map Data in Notebooks: A collection of mini-tutorials by Kaggle users for Python and R users.
+Analysis
+•	How to Get Started with Data Science in Containers: One of our data scientists, Jamie Hall, explains how and why Docker containers are at the heart of Notebooks – reproducible analysis.
+•	Approaching (Almost) Any Machine Learning Problem by Kaggle Grandmaster Abhishek Thakur: Exactly what it says – a great tutorial.
+Other
+•	Kaggle Datasets Twitter: The new account features newly featured datasets plus open data news.
+•	Collecting & Using Open Data: A blog by Kaggler MLWave recommended by Triskelion.
+________________________________________
+Technical Specifications
+Kaggle Datasets allows you to publish and share datasets privately or publicly. We provide resources for storing and processing datasets, but there are certain technical specifications:
+•	100GB per dataset limit
+•	100GB max private datasets (if you exceed this, either make your datasets public or delete unused datasets)
+•	A max of 50 top-level files (if you have more, use a directory structure and upload an archive)
+When you upload a dataset we apply certain processing steps to make the dataset more usable.
+•	A complete archive is created so the dataset can be easily downloaded later
+•	Any archives (e.g., ZIP files) that you upload are uncompressed so that the files are easily accessible in Notebooks (directory structure is preserved)
+•	Data types for tabular data files are automatically detected (e.g., geospatial types)
+•	Column-level metrics are calculated for tabular data which are viewable on the data explorer on the dataset's "Data" tab
+When publishing datasets, you might also want to consider the technical specifications of Notebooks if you intend to use (or encourage other Kaggle users to use) Notebooks to analyze the data.
+
+
+Notebooks
+Explore and run machine learning code with Kaggle Notebooks, a cloud computational environment that enables reproducible and collaborative analysis
+________________________________________
+Types of Notebooks
+There are two different types of Notebooks on Kaggle.
+Scripts
+The first type is a script. Scripts are files that execute everything as code sequentially. To start a script, click on “Create Notebook” and select “Script”. This will open the Scripts editing interface.
+From here you may select what type of script you would like to execute. You may write scripts in R or in Python.
+You can also execute selected lines of code by highlighting the code in the editor interface and clicking the “Run” button or hitting shift-enter. Any results will be printed to the console.
+“Deep Learning Support [.9663]” from the TalkingData AdTracking Fraud Detection Challenge is a great example of a Script-type.
+RMarkdown Scripts
+RMarkdown scripts are a special type of script that executes not just R code, but RMarkdown code. This is a combination of R code and Markdown editing syntax that is prefered by most R authors in our community.
+The RMarkdown editor is the same one used for basic R or Python scripts, except that it uses the special RMarkdown syntax. To start editing an RMarkdown script, click on “Create Notebook”, navigate to the “Scripts” pane, and click on that. Then, in the language dropdown, click on “RMarkdown”.
+“Head Start for Data Science” is a great example of a RMarkdown Script-type.
+Notebooks
+The last type is Jupyter notebooks (usually just “notebooks”). Jupyter notebooks consist of a sequence of cells, where each cell is formatted in either Markdown (for writing text) or in a programming language of your choice (for writing code). To start a notebook, click on “Create Notebook”, and select “Notebook”. This will open the Notebooks editing interface.
+Notebooks may be written in either R or Python.
+“Comprehensive data exploration with Python” is a great example of a Python Jupyter Notebook-type. “How to Become a Data Scientist” is a great example of an R Jupyter Notebook-type.
+________________________________________
+Searching for Notebooks
+In addition to being an interactive editing platform, you can find and use code that others in the community have shared public. Kagglers working with data across both the Datasets and Competitions platforms are constantly building cool things. Exploring and reading other Kagglers’ code is a great way to both learn new techniques and stay involved in the community.
+There’s no better place than Kaggle Notebooks to discover such a huge repository of public, open-sourced, and reproducible code for data science and machine learning.
+The latest and greatest from Notebooks is surfaced on Kaggle in several different places.
+Site Search
+You can use the site search in the top bar of the website while on any page to look for not only Notebooks but Datasets, Competitions, Users, and more across Kaggle. Start typing a search query to get quick results and hit "Enter" to see a full page of results that you can drill down into. From the full page search results, you can filter just to "Notebooks" and add even more filter criteria using the filter options on the left hand side of the page.
+Homepage
+When you’re logged into your Kaggle account, the Kaggle homepage provides a live newsfeed of what people are doing on the platform. While Discussion forum posts and new Datasets make up some of the contents of the home page, most of it is dedicated to hot new Notebooks activity. By browsing down the page you can check out all the latest updates from your fellow Kagglers.
+You can tweak your newsfeed to your liking by following other Kagglers. To follow someone, go to their profile page and click on “Follow User”. Content posted and upvotes made by users you have followed will show up more prominently.
+The same is true of other users who choose to follow you. Post high-quality notebooks and datasets and you will soon find other users following along with what you are doing!
+Notebook Listing
+A more structured way of accessing Notebooks is the Notebook listing, accessible from the “Notebooks” tab in the main menu bar.
+The Notebook listing is sorted by “Hotness” by default. “Hotness” is what it sounds like: a way of measuring the interestingness of Notebooks on the platform. Notebooks which score highly in Hotness, and thus appear highly in this list, are usually either recently written Notebooks that are scoring highly in things like upvotes and views, or “all-time” greats that have been consistently popular on the platform for a long time.
+Other methods of sorting are by
+•	Most Votes: Surfaces the most popular notebooks of all time
+•	Most Comments: Returns the most discussed notebooks of all time
+•	Recently Created: A real-time stream of new Notebooks
+•	Recently Run: A real-time stream of activity
+•	Relevance: Sorts the results based on their relevance to the query
+Other filtering options, available from the navigation bar, are Categories (Datasets or Competitions?), Outputs, Languages (R or Python?), and Types (Script or Notebook?).
+You can also use the Notebook listing to sort through your own Notebooks (“Your Work”), find Notebooks that others have shared with you ("Shared With You"), or to look at Notebooks you have previously upvoted (“Favorites”).
+Finally, a Notebooks-specific search bar is available here. This is often the fastest way to find a specific Notebook that you are looking for.
+Datasets and Competitions
+Data on Kaggle is available through either Datasets or our Competitions. Both prominently feature the best community-created Notebooks on the “Notebooks” tab. Browsing Notebooks on Datasets and Competitions provides a way to quickly get acquainted with a specific dataset. You can fork any existing public Notebook to make a copy of the code and start experimenting with changes.
+The Iris Species dataset and the Titanic competition are two classic examples of Datasets and Competitions, respectively, hosting great Notebooks on their content.
+Tags and Tag Pages
+Tags are the most advanced of the searching options available in the Notebook listing page. Tags are added by Notebook owners to indicate the topic of the Notebook, techniques you can use (e.g., “classification”), or the type of the data itself (e.g., “text data”). You can navigate to tag pages to browse more content sharing a tag either by clicking on a tag on a Notebook, or by searching by tag using the tag-specific search syntax: tag:[TAG NAME].
+Searching by tags allow you to search for Notebooks by topical area or technique. For example, if you are interested in learning new techniques for tackling classification problems you might try a search with the tag “classification” (tag:classification); if you are interested in an analysis of police records maybe a search with “crime” (tag:crime) would do the trick.
+Alternatively, you can achieve the same thing by visiting the related tag pages. For example, the crime and classification tags live at https://www.kaggle.com/tags/crime and https://www.kaggle.com/tags/classification, respectively.
+Tag pages include a section listing the most popular pages with the given tag, making them a great way of searching for Notebooks by content.
+________________________________________
+Using the Notebook Editor
+Kaggle Notebooks may be created and edited via the Notebook editor. On larger screens, the Notebook editor consists of three parts:
+•	An editing window
+•	A console
+•	A settings window
+The Notebook editor allows you to write and execute both traditional Scripts (for code-only files ideal for batch execution or Rmarkdown scripts) and Notebooks (for interactive code and markdown editor ideal for narrative analyses, visualizations, and sharing work).
+The main difference between Scripts and Notebooks is the editing pane and how you experience editing and executing code.
+Editing
+Whether you use Scripts or Notebooks might depend on your choice of language and what your use case is. R users tend to prefer the Scripts, while Python users prefer the Notebooks. For more on why that is, refer to the “Types of Notebooks” section. Scripts are also favored for making competition submissions where the code is the focus, whereas Notebooks are popular for sharing EDAs (exploratory data analysis), tutorials, and other share-worthy insights.
+Both editing interfaces are organized around the concept of “Versions”. This is a collection consisting of a Notebook version, the output it generates, and the associated metadata about the environment.
+In the Script editor, the code you write is executed all at once, whenever you generate a new version. For finer-grained control, it’s also possible to specifically execute only a single line or selection of lines of code.
+Notebooks are built on Jupyter notebooks. Notebook Notebooks consist of individual cells, each of which may be a Markdown (text) cell or a code cell. Code can be run (and the resulting variables saved) by running individual code cells, and cells can be added or deleted from the notebook at any time.
+Console
+The console tab provides an alternative interface to the same Python or R container running in the Notebook. Commands you input into the console will not change the content of your version. However, any variables you create in the console will persist throughout the session (unless you delete them). Additionally, any code that you execute in the editor will also execute in the console pane.
+Settings
+In the expanded editor, the settings pane takes up the right side of the screen. In the compact editor (where you hide the settings pane), it is folded into tabs above the Editor tab. In either case the settings pane contains the following tabs:
+There's a tab called “Data” that provides a way of adding or removing data from the Notebook.
+There's a tab called the Settings. The Settings tab has settings for toggling Language, toggling Docker image selection, toggling Internet (which is on by default), and toggling an Accelerator between CPU (default), GPU, and TPU.
+Language is the programming language the Notebook is authored in. You can use it to switch between R and Python in the notebook flavor, and between R, RMarkdown, and Python in the script flavor. For more details on the differences, see the “Types of Notebooks” section.
+The Docker image section can be used to pin the R or Python environment used for the Notebook against a certain Docker container version. More information can be found in "The Notebook Environment" section.
+________________________________________
+Adding Data Sources
+One of the advantages to using Notebooks as your data science workbench is that you can easily add data sources from thousands of publicly available Datasets or even upload your own. You can also use output files from another Notebook as a data source. You can add multiple data sources to your Notebook’s environment, allowing you to join together interesting datasets.
+Datasets
+Kaggle Datasets provides a rich mix of interesting datasets for any kind of data science project.
+There are two ways of loading a Dataset in a Notebook. The first is to navigate to a chosen dataset’s landing page, then click on the “New Notebook” button. This will launch a new Notebook session with the dataset in question spun up and ready to go.
+Alternatively, you may wish to add datasets after creating your Notebook. To do that, navigate to the “Data” pane in a Notebook editor and click the “Add Data” button. This will open a modal that lets you select Datasets to add to your Notebook.
+Competitions
+You can also add Competition data sources to your Notebook environment using the same steps as above.
+The main difference is that you need to accept the rules for any Competition data sources you add to your Notebook. Whether you start a new Notebook from the “Notebooks” tab of a Competition or add a Competition data source from an existing Notebook editor, you’ll be prompted to read and accept the rules first.
+You can mix Competitions and Datasets data sources in the same Notebook, but please be sure to abide by the rules of the specific Competition with respect to using external data sources. If you don’t, you risk consequences for rule-breaking in the Competition.
+Notebooks
+You will notice that there is a third option in the “Add Data” modal: Notebook Output Files.
+Up to 20 GBs of output from a Notebook may be saved to disk in /kaggle/working. This data is saved automatically and you can then reuse that data in any future Notebook: just navigate to the “Data” pane in a Notebook editor, click on “Add Data”, click on the "Notebook Output Files" tab, find a Notebook of interest, and then click to add it to your current Notebook.
+By chaining Notebooks as data sources in this way, it’s possible to build pipelines and generate more and better content than you could in a single notebook alone.
+“Minimal LSTM + NB-SVM baseline ensemble”, written by Jeremy Howard, is one example of a great Notebook using this feature. Click on the “Data” tab to view the data sources he uses.
+________________________________________
+Collaborating on Notebooks
+Notebooks collaboration is a powerful feature. It allows multiple users to co-own and edit a Notebook. For example, you can work with Competition teammates to iterate on a model or collaborate with classmates on a data science project.
+Inviting Collaborators
+From your Notebook editor or viewer, public or private, you may navigate to the 'Share' or 'Sharing' button in the Notebook’s menu to expose, among other settings, the Collaborators options. There, use the search box to find and add other users as Notebook collaborators.
+If your Notebook is private, you may choose between giving Collaborators either viewing privileges (“Can view”) or editing privileges (“Can edit”). If your Notebook is public, Collaborators can only be added with editing privileges (“Can edit”), as anyone can view it already.
+When you add a collaborator, they will receive a notification via email.
+“Creating, Reading & Writing Data”, a Notebook from the Advanced Pandas Kaggle Learn track, is one example of great collaborative Notebook.
+Collaborating on Datasets
+Using Notebooks is a powerful way to work with your collaborators on Datasets, too.
+Datasets created on Kaggle also have privacy settings, and these settings are distinct from the sharing settings on your Notebook meaning each can be shared with a different group of users. That is, your Notebook collaborators won’t automatically have the same access to any private Datasets as you unless they are explicitly invited to collaborate on the Dataset. Anyone has access to Datasets shared publicly.
+To learn more about how to use Datasets collaboratively, read more here.
+________________________________________
+The Notebook Environment
+Notebooks is more than just a code editor. It’s a versioned computational environment designed to make it easy to reproduce data science work. In the Notebooks IDE, you have access to an interactive session running in a Docker container with pre-installed packages, the ability to mount versioned data sources, customizable compute resources like GPUs, and more.
+Notebook Versions and Containers
+When you create a Notebook version using 'Save & Run All', you execute the Notebook from top to bottom in a separate session from your interactive session. Once it finishes, you will have generated a new Notebook version. A Notebook version is a snapshot of your work including your compiled code, log files, output files, data sources, and more. The latest Notebook version of your Notebook is what is shown to users in the Notebook viewer.
+Every Notebook version you create is associated with a specific Docker image version as well. Docker is a containerization technology which provides an isolated environment in which to do your work. Docker specifies the contents of this environment including installed Python and R packages using what is known as an image. Every Notebook version you create is associated with a Docker image.
+By default for new notebooks, this will be the latest version of the default Python or R images that we maintain at Kaggle. The contents of this image is publicly available on GitHub. You may view it at https://github.com/Kaggle/docker-rstats for the R container, or https://github.com/Kaggle/docker-python for the Python container.
+Dockerfiles and Notebook Versions
+Even if you are using one of the default Kaggle containers, the number, names, and versions of the packages that you’re using are still a moving target as our team continually updates them to ensure the latest and greatest packages are available. We update the images about every two weeks, mainly to upgrade to the latest versions of the packages we provide but also occasionally to add or remove certain packages. You can subscribe to notifications when we release a new Docker image on GitHub.
+It is also possible to pin a specific Docker image for use in a Notebook if there are multiple custom images available. This can be done by accessing the “Settings” tab in the Notebook editor. Next to "Environment", there is an option to select "Preferences." This opens a modal where you can select what your environment preference is between pinning to a specific image (the image version when your notebook was created) or always using the latest image. You can read more about these options here.
+In order to ensure that your Notebooks remain reproducible, we publicly expose the Dockerfile defining the environment the Notebook version was created in. You may download the contents of that Dockerfile by visiting the "Execution Info” section on your Notebook and navigating to the “Container image” field.
+Modifying the Default Environment
+You can request a modification to the default environment by submitting a pull request or an issue to the R or Python container on GitHub. Be sure to explain why you think a package should be added to the default environment. We welcome pull requests and engagement with our public images if users believe there are new packages that will be helpful and used by a significant majority of our users.
+More rarely, if you notice that something in our default environments broke, you may notify us of it using the same mechanism.
+Note that, even if approved, it can take several days for requested packages to be added to the live container image on the website.
+Modifying a Notebook-specific Environment
+It is also possible to modify the Docker container associated with the current Notebook image.
+Using a standard package installer
+In the Notebook Editor, make sure "Internet" is enabled in the Settings pane (it will be by default if it's a new notebook).
+For Python, you can run arbitrary shell commands by prepending ! to a code cell. For instance, to install a new package using pip, run !pip install my-new-package. You can also upgrade or downgrade an existing package by running !pip install my-existing-package==X.Y.Z.
+To install packages from GitHub in R, load the devtools package by running library(devtools). Then, you can run commands such as install_github("some_user/some_package") to install a new package from GitHub.
+Adding a free GPU
+You can add a single NVIDIA Tesla P100 to your Notebook for free. GPU environments have lower CPU and main memory, but are a great way to achieve significant speed-ups for certain types of work like training neural networks on image data. One of the major benefits to using Notebooks as opposed to a local machine or your own VM is that the Notebook environment is already pre-configured with GPU-ready software and packages which can be time consuming and frustrating to set-up. Free GPU availability is limited: in busy times, you might be placed in a queue.
+To add a GPU, navigate to the “Settings” pane from the Notebook editor and click the “Accelerator" > GPU option. Your session will restart which may take a few moments to several minutes if you don’t need to wait in a queue to access a GPU-enabled machine.
+To learn more about getting the most out of using a GPU in Notebooks, check out this tutorial Notebook by Dan Becker.
+Adding a free TPU
+You can add a TPU v3-8 to your Notebook for free. TPUs are hardware accelerators specialized in deep learning tasks. They are supported in Tensorflow 2.1 both through the Keras high-level API and, at a lower level, in models using a custom training loop. Free TPU availability is limited: in busy times, you might be placed in a queue. To learn more about getting the most out of using a TPU in Notebooks, check out this in depth guide.
+To add a TPU, navigate to the “Settings” pane from the Notebook editor and click the “Accelerator" > TPU v3-8 option. Your session will restart which may take a few moments to several minutes if you don’t need to wait in a queue to access a TPU-enabled machine.
+________________________________________
+Connecting Kaggle Notebooks to Google Cloud Services
+Some of these services incur charges to attached GCP accounts. Please review pricing for each of the following products before you begin to use them in your notebook.
+Kaggle currently has integrations with the Google Cloud Storage, BigQuery, and AutoML products. To enable these integrations, click on the “Add-ons” menu in the notebook editor and select “Google Cloud Services”. Once on the “Google Cloud Services” page you will need to attach your account to your notebook and you will need to select which of the integrations you want to enable. After enabling these integrations, you will be provided with a code snippet that can be copied and pasted into your notebook.
+Each line of this code snippet corresponds to a different Google Cloud Services Integration where PROJECT_ID should be an existing Google Cloud Project. Per AutoML docs (linked below), AutoML currently requires that the location (COMPUTE_REGION) must be `us-central1` for your GCS Bucket.
+For more information on how to use these services, please refer to Google Cloud Documentation or any of the specific product documentation.
+BigQuery
+•	BQ Documentation, BQML Documentation
+Google BigQuery is a fully managed, petabyte scale, low cost analytics data warehouse. There is no management required for users—instead, users can focus solely on analyzing data through queries and BigQuery ML to find meaningful insights in a pay-as-you-go billing model.
+Google BigQuery can be accessed using Kaggle’s free-tier account to query public data but requires a billing-enabled GCP account to query any data that isn’t publicly released by BigQuery. You should carefully review the prices of BigQuery before trying the integration in Kaggle Notebooks, as it can be easy to incur charges.
+# Set your own project id here
+PROJECT_ID = 'your-google-cloud-project'
+from google.cloud import bigquery
+bigquery_client = bigquery.Client(project=PROJECT_ID)
+
+For a more in-depth walkthrough of using the integration, please refer to the following notebooks:
+•	BigQuery in Kaggle Notebooks
+•	BigQuery Machine Learning Tutorial
+Google Cloud Storage (GCS)
+•	GCS Documentation
+Google Cloud Storage allows for storage and retrieval of data at any time across the globe. Users are able to use the storage space for any type of data and only pay for used storage space (per GB per month).
+Google Cloud Storage is a paid service and requires a billing-enabled GCP account. You should carefully review the prices of GCS before trying the integration in Kaggle Notebooks, as it can be easy to incur charges.
+# Set your own project id here
+PROJECT_ID = 'your-google-cloud-project'
+from google.cloud import storage
+storage_client = storage.Client(project=PROJECT_ID)
+
+For a more in-depth walkthrough of using the integration, please refer to the following notebooks:
+•	Moving Data to/from GCS
+AutoML
+•	AutoML Documentation
+Google AutoML is a suite of products that enables users to train custom machine learning models for tasks on structured data, vision and language. It is currently in Beta, so you may encounter usability frictions or known issues. We welcome all feedback from the community. User feedback will help us improve documentation and be shared directly with the AutoML team to help improve the product.
+Google AutoML is a paid service and requires a billing-enabled GCP account. You should carefully review the prices of AutoML before trying the integration in Kaggle Notebooks, as it can be easy to incur charges. You can see the pricing for each of the offerings in beta here:
+•	AutoML Tables Pricing
+•	AutoML Vision Pricing
+•	AutoML Natural Language Pricing
+
+# Set your own project id and compute region here
+PROJECT_ID = 'your-google-cloud-project'
+COMPUTE_REGION = 'us-central1' # must be `us-central1` to use AutoML (see docs)
+from google.cloud import automl_v1beta1 as automl
+automl_client = automl.AutoMlClient()
+project_location = automl_client.location_path(PROJECT_ID, COMPUTE_REGION)
+
+For a more in-depth walkthrough of using the integration, please refer to the following notebooks:
+•	AutoML Tables Tutorial
+Google Cloud AI Notebooks
+If you run into compute constraints while using notebooks on Kaggle, you can consider upgrading to Google Cloud AI Notebooks. These notebooks run under your project in Google Cloud, and can be configured to use your choice of virtual machine, accelerators and run without limits
+To export your notebook to Google Cloud, you can go to the File menu and select "Upgrade to Google Cloud AI Notebooks" from within the Notebooks Editor. You can also upgrade a notebook from the Viewer by clicking on the three-dot menu on the top right.
+For a more detailed description of how to export your Kaggle Notebooks to Google Cloud AI Notebooks, check out the announcement post here:
+•	[Feature Launch] Upgrade to Notebooks on Google Cloud for more compute!
+________________________________________
+Technical Specifications
+Kaggle Notebooks run in a remote computational environment. We provide the hardware—you need only worry about the code.
+At time of writing, each Notebook editing session is provided with the following resources:
+•	12 hours execution time for CPU and GPU notebook sessions and 9 hours for TPU notebook sessions
+•	20 Gigabytes of auto-saved disk space (/kaggle/working)
+•	Additional scratchpad disk space (outside /kaggle/working) that will not be saved outside of the current session
+CPU Specifications
+•	4 CPU cores
+•	30 Gigabytes of RAM
+P100 GPU Specifications
+•	1 Nvidia Tesla P100 GPU
+•	4 CPU cores
+•	29 Gigabytes of RAM
+T4 x2 GPU Specifications
+•	2 Nvidia Tesla T4 GPUs
+•	4 CPU cores
+•	29 Gigabytes of RAM
+TPU 1VM Specifications
+•	96 CPU cores
+•	330 Gigabytes of RAM
+NOTE: CPU Platforms (ex. Intel Skylake, Broadwell, AMD) may be variable during regular notebook runs, however submissions runs (for code competitions or when submissions are rerun in bulk) are always run on Intel Skylake CPUs.
+CPU Specifications
+While editing a Notebook, you are provided with 20 minutes of idle time for your interactive session. If the code is not modified or executed in that time the current interactive session will end. If this happens, you will need to click the Edit button again to continue editing. If you want to run a computation that takes longer, you can Save a Version of your Notebook from top to bottom by selecting the "Save & Run All" option in the "Save Version" menu (see below).
+Once you are satisfied with the contents of the Notebook you can click "Save Version" to save your changes. From there you will have two options for creating a new version:
+•	Quick Save skips the top-to-bottom notebook execution and just takes a snapshot of your notebook exactly as it’s displayed in the editor. This is a great option for taking a bunch of versions while you’re still actively experimenting. Quick Save is a brand new way of saving work on Kaggle.
+•	Save & Run All creates a new session with a completely clean state and runs your notebook from top to bottom. This is perfect for major milestones or when you want to share your work, as it gives you (and anyone else who reads your notebook) the confidence that your notebook can be run reproducibly. In order to save successfully, the entire Notebook must execute within 12 hours (9 hours for TPU notebooks). Save & Run All is identical to the “Commit” behavior you may have used previously on Kaggle.
+
+
+Public API
+Create Datasets, Notebooks, and connect with Kaggle
+________________________________________
+Getting Started: Installation & Authentication
+The easiest way to interact with Kaggle’s public API is via our command-line tool (CLI) implemented in Python. This section covers installation of the kaggle package and authentication.
+Installation
+Ensure you have Python and the package manager pip installed. Run the following command to access the Kaggle API using the command line: pip install kaggle (You may need to do pip install --user kaggle on Mac/Linux. This is recommended if problems come up during the installation process.) Follow the authentication steps below and you’ll be able to use the kaggle CLI tool.
+If you run into a kaggle: command not found error, ensure that your python binaries are on your path. You can see where kaggle is installed by doing pip uninstall kaggle and seeing where the binary is. For a local user install on Linux, the default location is ~/.local/bin. On Windows, the default location is $PYTHON_HOME/Scripts.
+Authentication
+In order to use the Kaggle’s public API, you must first authenticate using an API token. Go to the 'Account' tab of your user profile and select 'Create New Token'. This will trigger the download of kaggle.json, a file containing your API credentials.
+If you are using the Kaggle CLI tool, the tool will look for this token at ~/.kaggle/kaggle.json on Linux, OSX, and other UNIX-based operating systems, and at C:\Users\<Windows-username>\.kaggle\kaggle.json on Windows. If the token is not there, an error will be raised. Hence, once you’ve downloaded the token, you should move it from your Downloads folder to this folder.
+If you are using the Kaggle API directly, where you keep the token doesn’t matter, so long as you are able to provide your credentials at runtime.
+________________________________________
+Interacting with Competitions
+The Kaggle API and CLI tool provide easy ways to interact with Competitions on Kaggle. The commands available can make participating in competitions a seamless part of your model building workflow.
+If you haven’t installed the package needed to use the command line tool or generated an API token, check out the getting started steps first.
+Just like participating in a Competition normally through the user interface, you must read and accept the rules in order to download data or make submissions. You cannot accept Competition rules via the API. You must do this by visiting the Kaggle website and accepting the rules there.
+Some of the commands for interacting with Competitions via CLI include:
+•	kaggle competitions list: list the currently active competitions
+•	kaggle competitions download -c [COMPETITION]: download files associated with a competition
+•	kaggle competitions submit -c [COMPETITION] -f [FILE] -m [MESSAGE]: make a competition submission
+View all available commands on the official documentation on GitHub and keep up-to-date with the latest features and bug fixes in the changelog.
+To explore additional CLI arguments, remember that you can always append -h after any call to see the help menu for that command.
+Submitting to a Competition
+Assuming that you have already accepted the terms of a Competition (this can only be done through the website, and not through the CLI), you may use the Kaggle CLI to submit predictions to the Competition and have them scored. To do so, run the command kaggle competitions submit -c [COMPETITION NAME] -f [FILE PATH].
+You can list all previous submission to a Competition you have entered using the command kaggle competitions submissions -c [COMPETITION NAME].
+To explore some further CLI arguments, remember that you can always append -h after any call to see the help menu for that command.
+________________________________________
+Interacting with Datasets
+The Kaggle API and CLI tool provide easy ways to interact with Datasets on Kaggle. The commands available can make searching for and downloading Kaggle Datasets a seamless part of your data science workflow.
+If you haven’t installed the Kaggle Python package needed to use the command line tool or generated an API token, check out the getting started steps first.
+Some of the commands for interacting with Datasets via CLI include:
+•	kaggle datasets list -s [KEYWORD]: list datasets matching a search term
+•	kaggle datasets download -d [DATASET]: download files associated with a dataset
+If you are creating or updating a dataset on Kaggle, you can also use the API to make maintenance convenient or even programmatic. View all available commands on the official documentation on GitHub and keep up-to-date with the latest features and bug fixes in the changelog.
+To explore additional CLI arguments, remember that you can always append -h after any call to see the help menu for that command.
+Other than the Kaggle API, there is also a Kaggle connector on DataStudio! You can select Kaggle Datasets as a data source to import directly into DataStudio. Work in DataStudio to easily create beautiful and effective dashboards on Kaggle Datasets!
+Creating and Maintaining Datasets
+The Kaggle API can be used to to create new Datasets and Dataset versions on Kaggle from the comfort of the command-line. This can make sharing data and projects on Kaggle a simple part of your workflow. You can even use the API plus a tool like crontab to schedule programmatic updates of your Datasets to keep them well maintained.
+If you haven’t installed the Kaggle Python package needed to use the command line tool or generated an API token, check out the getting started steps first.
+Create a New Dataset
+Here are the steps you can follow to create a new dataset on Kaggle:
+•	Create a folder containing the files you want to upload
+•	Run kaggle datasets init -p /path/to/dataset to generate a metadata file
+•	Add your dataset’s metadata to the generated file, datapackage.json
+•	Run kaggle datasets create -p /path/to/dataset to create the dataset
+Your dataset will be private by default. You can also add a -u flag to make it public when you create it, or navigate to “Settings” > “Sharing” from your dataset’s page to make it public or share with collaborators.
+Create a New Dataset Version
+If you’d like to upload a new version of an existing dataset, follow these steps:
+•	Run kaggle datasets init -p /path/to/dataset to generate a metadata file (if you don’t already have one)
+•	Make sure the id field in dataset-metadata.json (or datapackage.json) points to your dataset
+•	Run kaggle datasets version -p /path/to/dataset -m "Your message here"
+These instructions are the basic commands required to get started with creating and updating Datasets on Kaggle. You can find out more details from the official documentation on GitHub:
+•	Initializing metadata
+•	Create a Dataset
+•	Update a Dataset
+Working with Dataset Metadata
+If you want a faster way to complete the required dataset-metadata.json file (for example, if you want to add column-level descriptions for many tabular data files), we recommend using Frictionless Data’s Data Package Creator. Simply upload the dataset-metadata.json file that you’ve initialized for your dataset, fill out metadata in the user interface, and download the result.
+To explore some further CLI arguments, remember that you can always append -h after any call to see the help menu for that command.
+________________________________________
+Interacting with Notebooks
+The Kaggle API and CLI tool provide easy ways to interact with Notebooks on Kaggle. The commands available enable both searching for and downloading published Notebooks and their metadata as well as workflows for creating and running Notebooks using computational resources on Kaggle.
+If you haven’t installed the Kaggle Python package needed to use the command line tool or generated an API token, check out the getting started steps first.
+Some of the commands for interacting with Notebooks via CLI include:
+•	kaggle kernels list -s [KEYWORD]: list Notebooks matching a search term
+•	kaggle kernels push -k [KERNEL] -p /path/to/folder : create and run a Notebook on Kaggle
+•	kaggle kernels pull [KERNEL] -p /path/to/download -m: download code files and metadata associated with a Notebook
+If you are creating a new Notebook or running a new version of an existing Notebook on Kaggle, you can also use the API to make this workflow convenient or even programmatic. View all available commands on the official documentation on GitHub and keep up-to-date with the latest features and bug fixes in the changelog.
+To explore additional CLI arguments, remember that you can always append -h after any call to see the help menu for that command.
+Creating and Running a New Notebook
+The Kaggle API can be used to to create new Notebooks and Notebook versions on Kaggle from the comfort of the command-line. This can make executing and sharing code on Kaggle a simple part of your workflow.
+If you haven’t installed the Kaggle Python package needed to use the command line tool or generated an API token, check out the getting started steps first.
+Here are the steps you can follow to create and run a new Notebook on Kaggle:
+•	Create a local folder containing the code files you want to upload (e.g., your Python or R notebooks, scripts, or RMarkdown files)
+•	Run kaggle kernels init -p /path/to/folder to generate a metadata file
+•	Add your Notebook's metadata to the generated file, kernel-metadata.json; As you add your title and slug, please be aware that Notebook titles and slugs are linked to each other. A Notebook slug is always the title lowercased with dashes (-) replacing spaces and removing special characters.
+•	Run kaggle kernels push -p /path/to/folder to create and run the Notebook on Kaggle
+Your Notebook will be private by default unless you set it to public in the metadata file. You can also navigate to "Options" > “Sharing” from your published Notebook's page to make it public or share with collaborators.
+Creating and Running a New Notebook Version
+If you’d like to create and run a new version of an existing Notebook, follow these steps:
+•	Run kaggle kernels pull [KERNEL] -p /path/to/download -m to download your Notebook's most recent code and metadata files (if you your local copies aren't current)
+•	Make sure the id field in kernel-metadata.json points to your Notebook; you no longer need to include the title field which is optional for Notebook versions unless you want to rename your Notebook (make sure to update the id field in your next push AFTER the rename is complete)
+•	Run kaggle kernels push -p /path/to/folder
+These instructions are the basic commands required to get started with creating, running, and updating Notebooks on Kaggle. You can find out more details from the official documentation on GitHub:
+•	Initializing metadata
+•	Push a Notebook
+•	Pull a Notebook
+•	Retrieve a Notebook's output
+
+
+
+Efficient GPU Usage Tips
+Efficient GPU Usage Tips and Tricks
+Kaggle provides free access to NVIDIA TESLA P100 GPUs. These GPUs are useful for training deep learning models, though they do not accelerate most other workflows (i.e. libraries like pandas and scikit-learn do not benefit from access to GPUs).
+You can use up to a quota limit per week of GPU. The quota resets weekly and is 30 hours or sometimes higher depending on demand and resources
+Here are some tips and tricks to get the most of your GPU usage on Kaggle. In general, your most helpful levers will be:
+•	Only turn on the GPU if you plan on using the GPU. GPUs are only helpful if you are using code that takes advantage of GPU-accelerated libraries (e.g. TensorFlow, PyTorch, etc).
+•	Actively monitor and manage your GPU usage
+•	Kaggle has tools for monitoring GPU usage in the settings menu of the Notebooks editor, at the top of the page at kaggle.com/notebooks, on your profile page, and in the session management window.
+•	Avoid using batch sessions (the commit button) to save or checkpoint your progress. Batch sessions (commits) run all of the code from top to bottom. This is less efficient than simply downloading the .ipynb file from the Notebook editor.
+•	Cancel unnecessary batch sessions
+•	The same Notebook can have multiple concurrent batch sessions if you press the commit button prior to completing the first commit. If your latest code has been updated as compared to your previous code, it is likely better for you to cancel that first commit and leave only the 2nd commit running.
+•	Stop interactive sessions prior to closing the window. Interactive sessions remain active until they reach the 60 minute idle timeout limit. If you stop the session prior to closing your window it can save you up to 60 minutes of compute.
+•	You can use the Active Events window in the lower left hand corner of your screen to manage your active sessions including stopping unused interactive sessions. Learn more about Active Events here.
+•	Consider using the Kaggle-API to avoid interactive sessions entirely. With the Kaggle API you can push a new version of your notebook without ever opening up an interactive session in the Notebook editor.
+We hope help you get the most from our free GPU compute. Happy Kaggling!
+Models
+Use and share pre-trained models
+________________________________________
+What is Kaggle Models
+Kaggle Models provides a way to discover, use, and share models models for machine learning and generative AI applications. Kaggle Models is a repository of pre-trained models that are deeply integrated with Kaggle's platform including for easy to use in Kaggle Competitions and Notebooks. Like Datasets, Kaggle Models organize community activity that enrich models' usefulness: every model page will contain discussions, public notebooks, and usage statistics like downloads and upvotes that make models more useful.
+Kaggle Models is a new product which the Kaggle team will continue to develop and improve based on what the community would like to see. If you'd like to make suggestions for improvements or new features or report bugs, we recommend you create a new topic on the Product Feedback forum.
+Where do Models come from?
+Kaggle Models come from a variety of sources including partners that we collaborate with on releases like Meta's Llama 2 and Alibaba's Qwen, integrations with modeling libraries like Keras, and the community of millions of Kagglers sharing fine-tuned variants and other innovations.
+________________________________________
+Finding Kaggle Models
+You can find Kaggle Models by using the Models landing page. There are a number of filters and sorts plus free text search. For instances you can search by:
+•	Filtering to Keras models
+•	Filtering by the task tag you want (e.g., classification)
+•	Filtering by model size
+•	Searching "Gemma" or other keywords in the free text search
+•	Sorting by number of upvotes
+•	Etc.
+You may also want to peruse the "Models" tab on competitions to see what models are performing well or are otherwise popular for tasks relevant to your use case. Competitors commonly share which models they're using in public notebooks and in discussion write-ups. When you fork a notebook that has a model from Kaggle Models attached to it, your copy will also have the same model attached.
+Finally, you can also search for models from within the notebook editor. Use the "Add Models" component in the right-hand pane of the editor to search and attach models to your notebooks. This works similarly to Datasets.
+Understanding the model detail page
+When you click on a model you will be taken to the "detail page" for that model. For example, this is the detail page for a BERT model. The model detail page contains an overview tab with a Model Card (metadata and information about how the model was trained, what its acceptable use cases are, any limitations, etc.), a framework and variation explorer, and a usage dashboard. There are tabs for notebooks and discussions. If a model is useful, you can upvote it.
+Beyond the overall metadata, a model detail page also organizes all variations and frameworks for a given model. For example:
+•	Variations: The same model with different numbers of parameters, e.g., small, medium, and large.
+•	Frameworks: The same model with different ML library compatibility, e.g., TensorFlow, PyTorch, etc.
+You can view and use the specific framework and variation that you want by selecting it in the file explorer on the overview page beneath the Model Card. From here, you can use click "New Notebook" to attach it to a new notebook to start using the model.
+Using Kaggle Models
+There's two broad ways that Kaggle Models are useful: on Kaggle and outside of Kaggle (e.g., in production applications or using non-Kaggle tools like Colab, etc.).
+On Kaggle
+Currently, Kaggle Models very useful within the context of Competitions, specifically for use within Notebooks. Start by either forking a notebook that has a model attached (you can view the attached models on the "Input" tab of any notebook), creating a new notebook on a model, or adding a model to a new notebook from the right-hand pane of the editor.
+You'll be prompted to confirm your framework and model variations(s), then simply copy and paste the starter code to load the model.
+Outside of Kaggle
+Many developers will need to download models in code outside of Kaggle. There are a few different methods: via the kagglehub Python library, via our Kaggle CLI, or by calling the API directly.
+Before providing instructions for each of these methods, it's helpful to know that you will need to know how to authenticate in order to access certain models like Gemma that require Kaggle credentials in order to confirm that user consent to the custom license has been verified. Obtain credentials from the “Settings” page when logged-in to Kaggle and clicking on the "Create New Token" button under the "API" section.
+The examples below allow you to download the 2b PyTorch variation for the google/gemma model. If a model doesn't have a restricted license like Gemma, you'll be able to skip the kagglehub.login() steps in the examples below.
+Method 1. Via the kagglehub Python library
+See kagglehub documentation.
+import kagglehub
+
+# Authenticate
+kagglehub.login() # This will prompt you for your credentials.
+# We also offer other ways to authenticate (credential file & env variables): https://github.com/Kaggle/kagglehub?tab=readme-ov-file#authenticate
+
+# Download latest version
+path = kagglehub.model_download("google/gemma/pyTorch/2b")
+
+# Download specific version (here version 1)
+path = kagglehub.model_download("google/gemma/pyTorch/2b/1")
+
+print("Path to model files:", path)
+Method 2. Via the Kaggle CLI
+See documentation. Follow steps here to authenticate with credentials.
+# Authenticate with credentials
+
+# Download specific version (here version 1)
+kaggle models instances versions download google/gemma/pyTorch/2b/1 
+Method 3. Calling the API directly
+# Authenticate with credentials
+export KAGGLE_USERNAME=xyz
+export KAGGLE_KEY=xyz
+
+# With Curl
+curl -L -o ~/Downloads/model.tar.gz  https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download -u $KAGGLE_USERNAME:$KAGGLE_KEY
+
+# Download specific version (here version 1)
+wget https://www.kaggle.com/api/v1/models/google/gemma/pyTorch/2b/1/download --user=$KAGGLE_USERNAME --password=$KAGGLE_KEY --auth-no-challenge
+________________________________________
+Creating a Model
+Kaggle has recently introduced the ability for the community to publish models to Kaggle Models. There are a few ways to accomplish this including exclusively via the UI. We recommend using a combination of kagglehub, our Python client library, to manage artifact creation and uploas and the UI to manage documentation and collaborative features.
+Uploading using kagglehub Python client library (preferred)
+See kagglehub documentation.
+1.	Install with pip install kagglehub
+2.	In a Python environment (e.g. Jupyter Notebook, IPython, etc.), run the below code
+import kagglehub
+
+# Other ways to authenticate also available: https://github.com/Kaggle/kagglehub?tab=readme-ov-file#authenticate
+kagglehub.login() 
+
+# For PyTorch framework & `2b` variation.
+# Replace the framework with "jax", "other" based on which framework you are uploading to.
+kagglehub.model_upload('google/gemma/pyTorch/2b', 'path/to/local/model/files', 'Apache 2.0')
+
+# Run the same command again to upload a new version for an existing variation.
+Uploading using the Kaggle CLI
+See documentation. Follow steps here to authenticate with credentials.
+1.	Install with !pip install kaggle
+2.	In a terminal, run the below code
+export MODEL_DIR="path/to/local/model/files"
+# Go to https://www.kaggle.com/settings, download your API token file and store it at ~/.kaggle/kaggle.json
+
+# Create a JSON file with the metadata: https://paste.googleplex.com/5354472119730176
+vim $MODEL_DIR/model-instance-metadata.json
+
+!kaggle models instances create -p $MODEL_DIR -r zip
+
+# To create a new version for the instance
+!kaggle models instances versions create -p $MODEL_DIR -r zip google/gemma// -n ""
+Upload via the UI (not preferred)
+1.	Go to: https://www.kaggle.com/models?new=true and follow the steps including setting “Creating As” to the Organization Profile you want to publish under
+2.	To add new Variations once your model is initially created:
+1.	Scroll down to the "Model Variations" section.
+2.	Click on the "New Variation" button to open the "Add/Edit" Variations modal.
+3.	Select the ML framework for which you want to update weights / assets for.
+4.	Click on the "Add new variation" button
+5.	Select the weight / assets files to upload
+6.	Enter the variation slug
+1.	For example, 7b
+2.	Select a license
+1.	Click on the "Create" button and wait until your instance has been fully processed.
+2.	Click on "Go to model detail page".
+3.	In the "Model Variations" section, you should see your variation in the drop-down.
+4.	If you select it, confirm that you have all the files you were expecting under the "File Explorer" section.
+5.	To upload a new version for an existing variation. Use the "New Version" button.
+Documenting models
+Documenting your model is easiest to do via the UI.
+3.	When viewing your model page, you will see a section at the top called “Pending Actions”.
+4.	Follow each of these steps to complete your model’s documentation:
+1.	Add a description (model card)
+2.	Add model instance descriptions including example code
+3.	Add a subtitle
+4.	Add tags
+5.	Specify provenance and other metadata
+6.	Publish a notebook (we recommend making it public after your model is made public)
+5.	Once your model is made public, you can also optionally generate a DOI from the “Metadata” section of your model.
+6.	Once you’re done, you can make your model public from the “Settings” tab on the model page.
+7.	You can now promote your model!
+8.	You’ll be automatically subscribed to email and site notifications when any discussion topics are created
+Competitions Setup
+Create a new competition or competition metric
+________________________________________
+Overview
+Anybody can launch a machine learning competition using Kaggle's Community Competitions platform, including educators, researchers, companies, meetup groups, hackathon hosts, or inquisitive individuals! In this guide, you will learn how to set up your own competition, step-by-step.
+Before diving in, it's helpful to understand how a Kaggle competition works.
+________________________________________
+How Kaggle competitions work
+Overview
+Every competition has two things, a) a clearly defined problem that participants need to solve using a machine learning model and b) a dataset that’s used both for training and evaluating the effectiveness of these models.
+For example, in the Store Sales – Time Series Forecasting competition, participants must accurately predict how many of each grocery item will sell using a dataset of past product and sales information from a grocery retailer.
+Once the competition starts participants can submit their predictions, Kaggle will score them for accuracy, and the team will be placed on a ranked leaderboard. The team at the top of the leaderboard at the deadline wins!
+Datasets, Submissions & Leaderboards
+Every competition’s dataset is split into two smaller datasets.
+One of these smaller datasets will be given to participants to train their models, typically named train.csv.
+The other dataset will be mostly hidden from participants and used by Kaggle for testing and scoring, named test.csv and solution.csv (test.csv is the same as solution.csv except that test.csv contains the feature values and solution.csv contains the ground truth variable(s) – participants will never, ever see solution.csv ).
+When a participant feels ready to make a submission to the competition, they will use test.csv to generate a prediction and upload a CSV file. Kaggle will automatically score the submission for accuracy using the hidden solution.csv file.
+Most competitions have a maximum number of submissions that a participant can make each day and a final deadline at which point the leaderboard will be frozen.
+It’s conceivable that a participant could use the mechanics of a Kaggle competition to overfit a solution - which would be great for winning a competition, but not valuable for a real-world application.
+To help prevent this, Kaggle has two leaderboards – the public and private leaderboard. The competition host splits the solution.csv dataset into two parts, using one part for the public leaderboard and another part for the private leaderboard. Participants generally will now know which samples are public vs private. The private leaderboard is kept a secret until after the competition deadline and is used as the official leaderboard for determining the final ranking.
+________________________________________
+Create your competition️
+To create a new competition, click on the “Create new competition” button at the top of the Kaggle Community landing page.
+Then, enter a descriptive title, subtitle and URL for your competition. Be as descriptive and to the point as possible. In our example above, the title “Store Sales - Time Series Forecasting” quickly outlines the type of data, the industry of the dataset, and the type of problem to be solved.
+If you want to create a competition with more privacy, you can limit your competition's visibility and restrict who can join on this page.
+Visibility: Competitions with their visibility set to public are viewable on Kaggle and appear in Kaggle search results. Competitions with visibility set to private are hidden and only accessible via invitation URLs from the host.
+Who Can Join: Competitions access can be set to three levels: anyone, only people with a link and restricted email list. If you select anyone, all Kagglers can join your competition. Selecting only people with a link, will restrict access to those users you provide a special URL. Finally, restricted email list is the most private competition. Only Kagglers with accounts that match the emails or email domains you specify will be able to join. Note: if you select restricted email list, notebooks will be turned off. This provides a way to ensure that any private data that you have in a competition is not accidentally leaked through shared notebooks. You can choose to re-enable notebooks if you choose.
+Review and accept our terms of service, then click “Create Competition”.
+Your competition listing is now in draft mode. You can take your time to prepare the details before making the competition public.
+________________________________________
+Prepare the dataset
+Overview
+You will typically need to prepare and split your chosen dataset into four CSV files with different purposes and formatting requirements:
+•	train.csv will be given to participants to train their models. It includes the inputs and the ground truth. For example, in the grocery store competition, train.csv contains columns of product data and the solution columns – whether or not the product sold. Typically this is roughly 70% of the original dataset.
+•	test.csv is given to participants and includes the features of the test set so they can create a submission file with their predictions.
+•	solution.csv is always hidden from participants and used by Kaggle’s platform to score submissions. The rows should correspond with those of test.csv and typically comprises roughly 30% of the original dataset.
+•	sample_submission.csv is a placeholder CSV file with the correct formatting, which helps participants understand the expected submission format for the competition.
+It's up to you to determine how exactly you'd like to split your dataset into train and test files but it's typically best practice to ensure both train and test have the same type of data represented. Also, most people go with a 70/30 or 75/25 train/test split but it's problem and dataset dependent.
+Note: this guide provides instructions for tabular data. Other problem types like image data are possible using similar steps.
+Implement a unique ID column
+Before splitting the dataset, make sure that your dataset has an Id column with unique values. The Id column is how the scoring system knows which rows of a submission correspond to which rows of the solution. Make sure that the Id column is the very first column of your solution file.
+Prepare the train.csv file
+Take a large chunk of your dataset, typically 70% and split it into its own dataset named train.csv. Be sure not to remove the ground truth column(s) because participants need that information to train their models. Save and set aside for upload later. For example:
+train.csv
+input_feature1,input_feature2,target_feature
+100,52.12,1
+192,203.2,1
+64,-59.1,0
+
+
+Prepare the test.csv and solution.csv files
+Take the rest of your dataset and duplicate it to create two identical files.
+Then take one file and remove the ground truth column(s) and save it as test.csv.
+Next, take the other copy and delete all columns except the unique id column and the ground truth column(s). Save it as solution.csv.
+Your solution file needs to specify which rows will be used for the public leaderboard and which will be used for the private leaderboard. You'll need to add a Usage column to your solution file where each row contains one of three values: Public, Private or Ignored. This step is not strictly necessary for competitions that use legacy metrics.
+Examples:
+test.csv
+id,input_feature1,input_feature2
+0,93,34.82
+1,104,74.3
+2,89,-12.0
+solution.csv
+id,target_feature,Usage
+0,1,Public
+1,0,Private
+2,1,Ignored
+
+
+Prepare the sample_submission.csv file
+Duplicate the solution.csv file, delete the Usage column, and replace all ground truth values with placeholders that have valid values. Save this as submission.csv. This file will be given to users as an example of how to format submissions for evaluation. For example:
+sample_submission.csv
+id,target_feature
+0,0
+1,0
+2,0
+________________________________________
+Set up scoring
+Navigate to the Host tab > Evaluation Metric page in the right side navigation to set up scoring.
+Designate your scoring metric
+Choose the scoring metric you’d like to use for your competition in the drop down menu, or see below for how to write your own metric in Python.
+There are many ways to determine “how accurate” a submission may be. In the grocery store competition example, you may want to reward underestimates more than overestimates, or reward predictions exponentially more the closer they get to the ground truth. If you are unfamiliar with the types of common evaluation metrics used in machine learning, we’d encourage you to take a look at the details of common evaluation metrics to find the right fit.
+Kaggle provides two types of metrics: Python (tagged with the  icon ) and Legacy (no icon). There are a few key differences. The source code for Legacy metrics is not publicly available and they typically have limited documentation. The setup process is also slightly different: Legacy metrics require manually mapping every column. However, Legacy metrics do offer speed advantages in some circumstances.
+When a metric is selected, your competition will be tied to the latest version of that metric. If a newer version is later published, you must manually update your competition to use it.
+Upload the solution.csv file
+Click on the upload icon to upload your solution.csv file.
+If you've chosen a Python metric, check that your solution file's format matches that expected by the metric's documentation, or just continue to testing a submission to see if it matches.
+If you've chosen a Legacy metric, then after uploading the solution.csv file the column headers will auto populate the Solution Mapping table below. Mapping allows our metric code to understand which columns to use for calculations. Choose the correct “Expected Column” values. Note, some evaluation metrics let you score multiple columns simultaneously.
+Upload the sample_submission.csv file and map the verification
+Click on the upload icon to upload your sample_submission.csv file.
+If you've chosen a Legacy metric, then after uploading you'll again need to complete the same process of column mapping for the submission format.
+Upload data for participants
+Click on the Data tab and “Upload first version” button on the bottom of your screen to upload all data that participants can access – test.csv, train.csv files and sample_submission.csv file. Note: you will have additional data files if creating an image/video/etc. competition. Kaggle will process your data and create a versioned dataset, which will also be made accessible via Kaggle notebooks.
+________________________________________
+Creating a New Metric
+You can implement a new metric in a Python notebook at this link or from the Host > Evaluation Metric tab on a competition. Metric notebooks can be published and shared, but currently only Kaggle staff can add metrics to the public metric listing. If you think your metric is a good candidate for general use, please make the notebook public and post in the competition hosting forum.
+Before your metric executes, Kaggle automatically reads the solution and submission file into Pandas dataframes, aligns the solution and submission rows based on a provided id column, and calls a score() function. Your metric code needs to define this score() function and it must return a single float. Almost all solution files are split into a Public and Private set by way of a Usage column in the file. The score() function is called separately for each of these respective sets.
+Your score() function must satisfy the following constraints:
+•	Accept the arguments solution: pd.DataFrame, submission: pd.DataFrame, row_id_column_name: str, in that order. You can add any other keyword arguments that you need after those three. Any additional keyword arguments are configured on a per-competition basis on the Evaluation Metric page.
+•	All arguments and the return value of score must have type annotations.
+•	Default argument values are encouraged but not required.
+•	score() must return a finite float.
+•	score() must have a docstring. The docstring will be shown to competition hosts on the evaluation tab after they have selected a metric. We encourage you to include at least the same sections covered in our example metric's docstring: a general description of the metric, explanations of each of the score arguments, references for the metric math, and examples of valid use.
+•	In order to prevent data leaks from the solution file, errors must specify who will see the details. Only errors raised as ParticipantVisibleError will be visible to all participants.
+•	Error messages will be truncated to 280 characters.
+•	The scoring runtime is limited to 30 minutes total for the Public and Private splits combined.
+•	Metric notebooks do not have internet access and can not use accelerators, so your score() function must not rely on these notebook features.
+Once your code is ready, you will also need to define some metadata in the Metric section of the notebook sidebar. You must save this metadata separately from the rest of the notebook.
+•	Name: your metric will use the metric notebook's name. Save the metadata to update the name.
+•	Description: a short (less than 255 characters) description of the metric.
+•	Category: the main use of the metric, such as clustering or regression.
+•	Leaderboard sort order: toggle this to indicate if a higher score is better or worse.
+•	Pass complete submission: Advanced use only. You almost certainly only want to use this if your submission can have a different number of rows than the solution file. When enabled, your metric will receive the entire submission file for both the public and private scoring rounds. Your metric will need to manage matching the solution and submission rows using the row_id_column_name.
+You will need to use the dedicated Save button in the Metric section of the notebook sidebar for this metadata, in addition to the Save & Validate button used to save the notebook's source code. When you save your metric, your notebook will first be committed like any other notebook, followed by a series of metric-specific validation checks. This validation step will also re-run any unit test functions and doctests that are discoverable with Pytest. We strongly encourage you to include test cases, but they are not mandatory.
+If the validation step fails, your notebook code will still save, but no new metric version will be created. We recommend reviewing this example metric or metric template before you begin coding.
+________________________________________
+Test your competition
+Sandbox Testing
+Once you set up the solution and submission files you can test submissions in the submission sandbox. You will need at least one sample submission that successfully generates a score in order to launch your competition.
+Verify that the scoring is working as intended (e.g. a random submission should have a random score, a perfect submission should have a perfect score, etc.). You may have to experiment to understand what is and is not allowed in submission formats, but the system should provide clear error messages in the event something is wrong with a file.
+Benchmarking a Solution (Optional)
+To create a benchmark score for your participants to meet or exceed, check the box next to the submission you’d like to use as a benchmark. You’ll then see that score listed as a benchmark on the leaderboard.
+________________________________________
+Finalize your settings and descriptions
+Most of the heavy lifting is now complete for the competition and it's now time to craft all the final details and settings.
+First navigate to the Host tab and complete your configuration in the Basic Details, Images and Evaluation Metric pages.
+Then click through the Overview, Data, and Rules tabs and make sure all text descriptions are polished and ready for participants.
+You can also go to the Launch Checklist page which shows your remaining steps.
+Score Decimals to Display
+The "Score Decimals to Display" setting on the Basic Details page controls how many decimal places are shown in the user interface. We always use full-precision scores for calculations and ranking comparisons, but it can be useful to truncate the displayed scores to make them look cleaner or to prevent leaderboard probing. For example, if participants can see full-precision scores, they could make small changes to their submission and examine the score difference to infer the ground truth of the public test set, or reverse engineer the split between public and private leaderboards.
+________________________________________
+Launch and invite participants
+Go to Host > Launch Checklist and confirm that all the boxes are checked green. Once they are, you’re good to go! Buttons allowing you to launch the competition now or schedule launch in the future will appear – choose according to your needs.
+You’ll know your competition is live when it says “Competition is active.”
+You can invite participants to your competition by sharing the URL at the bottom of the Launch Checklist or Basic Details. This link respects the access settings you specified when creating the competition. If you selected anyone can join, this link will be the competition URL. If you selected only people with a link, anyone with this URL can participate in the competition, so make sure you share the link with the right audience. If you’d like a select group to participate, send the URL via email. If you’d like broad participation, use social media or encourage participants to invite their friends. If you selected restricted email access, the link will only work if the Kaggler's email address appears on the list of restricted emails you specified.
+________________________________________
+FAQs
+Creating Your Competition
+Where can I get a dataset for my competition?
+We recommend that you source your own, since it’s typically best to use data to which the participants do not have access (to minimize the temptations to cheat).
+But, if you don’t don’t mind it being fully accessible by participants (e.g. for a purely educational competition), consider browsing Kaggle’s Datasets platform. It hosts thousands of public datasets and has rich search and filter tools to help you find something that fits your needs. Each dataset should include a data use license, which will indicate if you can use it for your competition.
+I’m receiving [an error]. How can I resolve it?
+Start by reading through this setup guide. If you still can’t resolve the issue, try asking other Community Competition hosts in the Kaggle forums.
+I want to run the same competition again. Do I need to start from scratch?
+For now, you are not able to clone a past competition. You’ll need to start setup from the beginning.
+Who can see my competition?
+It depends on the privacy setting that you chose. Kaggle has 2 privacy settings – public and limited. Public means that your competition will be listed and discoverable on kaggle.com. Limited means that only people with the provided URL can view and join the competition.
+Where can I find the invitation link?
+If you selected Public, you can share your competition from your browser tab – anyone can see the competition. If your competition is set to Limited privacy, visit your competition > Host > Privacy > URL for Sharing (if you’ve selected Limited).
+How do I contact support?
+Unfortunately, we aren’t able to provide hands-on support for setting up or troubleshooting your competition. But, if you are experiencing an issue that you believe is affecting the entire platform, please contact us. We also encourage connecting with other community competition host on Kaggle’s forum.
+Can I offer a prize for a Community Competition?
+Unfortunately, a cash prize cannot be offered without additional paperwork with Kaggle. If you’d like to run a competition with a cash prize, please reach out to our Kaggle Competitions Team, who can walk you through the necessary steps.
+During Your Competition
+Can I invalidate or delete a participant’s submissions?
+Yes, go to your competition and navigate to: Host > All Submissions. There you can hide specific submissions.
+Can I upload a new solution file and rescore the competition?
+You can upload a new solution file, but you cannot rescore a competition on your own. Please upload a new solution file and contact support. An administrator can rescore your competition. Competitors’ new submissions will be scored against the new solution file.
+I would like to download my participants’ email addresses so I can email them for a new competition. How do I do this?
+Due to privacy regulations, you cannot currently download the email addresses of participants.
+I want to give participants more time to compete, how do I change my competition deadline?
+If the competition has already ended, you should set up a new competition, as participants will have seen the private leaderboard. If the competition is still active,you can change the deadline by going to: Your competition > Host > Settings >Deadline
+Organizations
+How to create, use, and manage organization profiles
+________________________________________
+Overview
+Anyone can create an organization profile on Kaggle. Organization profiles allow anyone in the community can find your organization's datasets, models, and competitions in one place.
+Before creating an organization, it's helpful to understand how organization profiles work.
+________________________________________
+How do organization profiles work
+What are organizations for?
+Organization profiles are a "landing page" for your organization's published competitions, models, and datasets. For example, it gives you an easy way to share (and other users to find) all of the datasets and models that your team has published with a single link.
+What are organizations NOT for?
+Currently, organizations are not meant to be used as a tool for collaboration with a group of people. While all members of an organization can create competitions, datasets, and models as an organization, this does not give other members of the organization the ability to manage that content (edit, delete, update, or view private resources). Read more about organization permissions below.
+Who should create and use organization profiles?
+There are a number of groups for whom organization profiles can be helpful! For professors, an organization profile can make it easier to see and manage the community competitions that you host for your classes. For research labs, whether part of a university or industry corporation, organization profiles provide a way to organize the models and datasets your team has published in one place. For large companies, an organization profile will display all of the competitions you've hosted.
+________________________________________
+Creating a new organization profile
+Creation
+Anyone can create an organization profile. To create one, click on the "+Create" button in the upper lefthand corner on any page on Kaggle. This will open up the creation flow.
+On this page you'll fill out the following information:
+•	Name: The name of your organization
+•	Tagline: A short description of your organization
+•	URL: You should edit this to something that's short. All links to this organization page will start with this URL, e.g., any datasets or models it owns.
+•	Website: A URL to your organization website
+•	Image: A 400 x 400px image of your organization logo
+•	Moderation Details: Information you share here won't appear on your organization profile page, but will be used by our team to review your organization for approval.
+You'll be able to change your organization Name, Tagline, Website, and Image among other things once you've clicked "Create organization". You will also be able to add a bio and invite members to your organization and more.
+Once you click "Create organization", your organization will be reviewed by Kaggle's moderation team for approval before it's made public. Continue to the next section "Review" to learn more about the next steps.
+Review
+While your organization is being reviewed by Kaggle's moderation team it's in a "pending" state.
+While your organization is in a pending state, you are able to invite members but you won't be able to start creating competitions, datasets, or models under your organization profile until it's approved.
+While your organization is in a pending state, the organization profile will not be publicly visible to non-members.
+At this point, Kaggle's moderation team will review your organization profile for approval. You will receive a notification when your organization profile's status changes.
+If you have questions about the review process or you would like to appeal a review, please see our contact page: https://www.kaggle.com/contact#/other/issue
+Approval
+Once your organization has been approved, you'll receive an email and/or site notification. You and other members of the organization can now create organization-owned datasets, models, or competitions including making them public. Anyone can also see your organization's profile page.
+________________________________________
+Organization member permissions
+Abilities of organization members
+Organization members can create datasets, models, and competitions under approved organization profiles.
+Again, organizations are not currently meant to be used as a tool for collaboration with a group of people. While all members of an organization can create competitions, datasets, and models as an organization, this does not give other members of the organization the ability to manage that content (edit, delete, update, or view private resources).
+If you want to share private datasets or models owned by an organization profile, you will need to use Collaboration features.
+Similarly, organization members are NOT able to see any unlaunched competitions unless their user is the creator of the competition.
+Members will not be able to add new members to an organization unless the organization owner shares the unique invitation link.
+Abilities of organization admins
+Organization admins have the same abilities and permissions as organization members. In addition, they can add and remove members, transfer ownership of the organization to another member, and edit information about the organization (logo, tagline, description, etc.).
+________________________________________
+How to create content as an organization
+Competitions
+Anyone can host a community competition, by clicking the "+Create" button in the upper lefthand corner of any page on Kaggle and selecting "Competition." In order to associate your competition with an organization profile that you are an admin or member of, simply choose your organization from the "Creating As" dropdown.
+When a competition is created under an organization profile, the competition will feature your organization's logo and the competition will show up on the "Competitions" tab of your organization's profile page.
+When a competition is created under an organization profile, there are NO changes to who can see or manage your competition. That is, other members of the organization cannot see an unlaunched competition and they cannot manage the settings of your competition when it is launched.
+Datasets and Models
+Anyone can publish datasets or models, by clicking the "+Create" button in the upper lefthand corner of any page on Kaggle and selecting "Dataset" or "Model". In order to associate your dataset or model with an organization profile that you are an admin or member of, simply choose your organization from the "Creating As" dropdown.
+When a competition is created under an organization profile, the dataset or model will feature your organization's logo and the dataset or model will show up on the "Datasets" or "Models" tab respectively of your organization's profile page.
+When a dataset or model is created under an organization profile, other members will be able to see it while it's private. There are NO changes to who can see or manage your datasets or models created under an organization profile. That is, other members of the organization cannot cannot edit, delete, or update the datasets or models unless they are separately added as edit collaborators on the "Settings" tab of the dataset or model.
+
+
+
+What is Kaggle?
+Learn what Kaggle is and why it is one of the most popular platforms for data scientists. Get answers to Kaggle's most frequently asked questions.
+ 
+
+
+
+
+
+What is Kaggle?
+Kaggle is an online community platform for data scientists and machine learning enthusiasts. Kaggle allows users to collaborate with other users, find and publish datasets, use GPU integrated notebooks, and compete with other data scientists to solve data science challenges. The aim of this online platform (founded in 2010 by Anthony Goldbloom and Jeremy Howard and acquired by Google in 2017)  is to help professionals and learners reach their goals in their data science journey with the powerful tools and resources it provides. As of today (2021), there are over 8 million registered users on Kaggle.
+One of the sub-platforms that made Kaggle such a popular resource is their competitions. In a similar way that HackerRank plays that role for software developers and computer engineers, “Kaggle Competitions” has significant importance for data scientists; you can learn more about them in our Kaggle Competiton Guide and learn how to analyze a dataset step-by-step in our Kaggle Competition Tutorial. In data science competitions like Kaggle’s or DataCamp’s, companies and organizations share a big amount of challenging data science tasks with generous rewards in which data scientists, from beginners to experienced, compete on their completion. Kaggle also provides the Kaggle Notebook, which, just like DataCamp Workspace, allows you to edit and run your code for data science tasks on your browser, so your local computer doesn't have to do all the heavy lifting and you don't need to set up a new development environment on your own. 
+Kaggle provides powerful resources on cloud and allows you to use a maximum of 30 hours of GPU and 20 hours of TPU per week. You can upload your datasets to Kaggle and download others' datasets as well. Additionally, you can check other people's datasets and notebooks and start discussion topics on them. All your activity is scored on the platform and your score increases as you help others and share useful information. Once you start earning points, you will be placed on a live leaderboard of 8 million Kaggle users. 
+Kaggle is suitable for different groups of people, from students interested in data science and artificial intelligence to the most experienced data scientists in the world. If you are a beginner, you can take advantage of the courses provided by Kaggle. By joining this platform, you will be able to progress in a community of people of various levels of expertise, and you will have the chance to communicate with many highly experienced data scientists. As you earn Kaggle points and medals, which are proof of your progress, it is quite possible that you may even end up attracting headhunters and recruiters, and unlock new job opportunities.
+Last but not least, when applying for jobs in data science, mentioning your Kaggle experience definitely makes a positive impact. It goes without saying that all these benefits also apply to highly experienced data scientists. No matter how experienced you are, this platform offers continuous learning and improvement possibilities, and, of course, the cash rewards that can come with the competitions are just as interesting.
+Helpful Data Science Courses for Kaggle Success
+Here are some of the recommended courses on DataCamp for beginners:
+•	Winning a Kaggle Competition in Python: Develop the approaches you will apply and the strategies you will determine in Kaggle competitions
+•	Introduction to Python: Learn the basics of the most popular language in data science
+•	Intermediate Python: This is another course about basic Python knowledge
+•	Linear Classifiers in Python: Learn logistic regression and support vector machines and develop your first models using Scikit-learn
+•	Cluster Analysis in Python: Unsupervised learning using the SciPy library 
+•	Preprocessing for Machine Learning in Python: Prepare your data for machine learning models
+•	Model Validation in Python: Learn to answer the question, “how good is your model?” 
+•	Dimensionality Reduction in Python: The foundation of data visualization
+•	Designing Machine Learning Workflows in Python: Take a high-level look at the process for producing production-ready machine learning models 
+•	Data Privacy and Anonymization in Python: A must-have course about the privacy of the company you work for, or for any startup you may establish
+•	Introduction to Data Visualization with Seaborn: Develop your data visualization skills using the Seaborn python library—an ideal course for data visualization beginners
+•	Image Processing in Python: In this course, you can learn image preprocessing techniques that will enable you to access and extract the vast amount of information carried in images.
+•	Introduction to Natural Language Processing in Python: Learn the basics of natural language processing and the use of some popular libraries in this field 
+•	Introduction to SQL: Learn basic SQL for working with databases 
+•	Intermediate SQL: Improve your SQL skills 
+•	Introduction to Deep Learning with PyTorch: An introduction to deep learning using the most popular and easy-to-use Python’s Pytorch package 
+•	Time Series Analysis in Python: Learn about time series models and techniques 
+Kaggle Jobs
+“Kaggle Jobs” was a data science job-sharing platform opened by Kaggle in 2014. The objective of the platform was to help companies find the most suitable candidates and to help data scientists find the right companies for them. The platform was closed by Kaggle in 2020 due to insufficient activity. However, here are some Kaggle Jobs alternatives and other employment platforms:
+•	Linkedin: One of the most commonly used platforms for job searching. You will find suitable job offers just by writing "data scientist" in the search bar. You can specify more detailed filters as well, like remote/office, location, company size, etc.
+•	Upwork: Upwork is a freelance job platform that is also ideal for finding both part-time and full-time jobs. Before applying for long-term jobs, candidates generally need to have completed a few short-term jobs and received some reviews.
+•	AngelList: An ideal platform for startups to apply for job postings.
+•	Y Combinator: This is an accelerator and funding platform from where the most prestigious startups are selected. Job postings of these startups are shared on the platform.
+•	StackOverflow: This is a Q&A platform for programmers and engineers that we all benefit from, from young to old, and experienced to inexperienced. It also has a job posting area.
+KAGGLE FREQUENTLY ASKED QUESTIONS (FAQS)
+What is Kaggle and what is it used for?
+Kaggle is a data science and artificial intelligence platform. On this platform, contests with monetary prizes are published by large companies and organizations. In addition to the competitions, users can also share their datasets and examine the datasets shared by others. Moreover, data scientists can share code snippets using these datasets and talk to other data scientists about them in the discussion section. Any user can benefit from participating in the free courses shared on Kaggle and they receive a free certificate after completing them successfully.
+Is Kaggle free?
+Yes, everything on Kaggle is completely free: courses, certificates obtained from courses, datasets, participation in competitions, discussion sections, etc.
+What are Kaggle competitions?
+Kaggle competitions consist of data science tasks. Some competitions do not have any prizes (but offer learning and knowledge sharing opportunities), while others have generous cash prizes. You can participate in these competitions on your own or with a team. In addition to the prize money for good scores in the competitions, you win medals and points. These points and medals put you on a leaderboard along with other data scientists of all levels on the platform. This ranking determines your global ranking in Kaggle. The competitions you win on Kaggle and your Kaggle ranking can have an advantageous impact on your career. For more information about the competitions, visit section 4.
+Is Kaggle a good way to learn data science?
+There are many alternatives for learning the basics and introducing yourself to data science, but there are several reasons why Kaggle stands out so well. There are many factors that will help you increase your knowledge and maintain your motivation on Kaggle.
+The main one is Kaggle's ranking system. As you develop, score in competitions, and provide useful information for others, your worldwide Kaggle ranking increases, and you can follow it instantly. The fact that you are placed among many expert data scientists on the platform is very motivational.
+Additionally, many people on the platform are helpful and continue to earn points and increase their rankings as they help you. For example, if you share a piece of code and a discussion about it, when you ask a question in the discussion about how you can develop your own code, it is very likely that you will receive comments from the best data scientists on the platform. This works as a mentoring system that proves to be very useful, especially for beginners.
+Who owns Kaggle? 
+Kaggle was founded in 2010 by Anthony Goldbloom and Ben Hamner. On 8 March 2017, Google acquired Kaggle.
+Are Kaggle datasets free?
+To find out for what purposes you can use the datasets, you need to check the datasets’ license. Some datasets cannot be used in academic publications or for commercial purposes. However, you can download each shared dataset free of charge to your Kaggle Notebook or anywhere else via the Kaggle API.
+Does Kaggle provide GPU?
+In Kaggle notebooks, you can activate a GPU at any time. You are allowed to use the GPU actively for a maximum of 30 hours per week. The GPU provided by Kaggle is Nvidia Tesla P100 GPU with 16GB memory.
+Who is Jeremy Howard?
+Jeremy Howard is an Australian data scientist and entrepreneur who won the global Kaggle data science competitions in 2011 and 2010. Howard then became Chief Scientist and President at Kaggle.
+What is a Kaggle Grandmaster?
+The grandmaster tier is the highest among the Kaggle performance tiers (novice, contributor, expert, master, and grandmaster). In order to reach the grandmaster level, a user needs to win at least 5 gold medals in competitions, out of which at least 1 needs to be a solo gold medal; at least 5 gold and 5 silver medals in datasets; at least 15 gold medals in notebooks; and at least 500 medals in discussions, out of which at least 50 need to be gold medals. There are currently only 241 data scientists in the grandmaster tier.
+Are Kaggle datasets open-sourced?
+Yes. Kaggle datasets are open-sourced, but to find out for what purposes these datasets can be used, you need to check the datasets' license. Some datasets cannot be used in academic publications or for commercial purposes.
+Are Kaggle datasets reliable?
+The vast majority of Kaggle datasets are reliable. You can judge how reliable a dataset is by looking at its upvotes or by reviewing the notebooks shared using the dataset. However, not all Kaggle datasets will work for real-life use cases.
+Does Kaggle have a mobile app?
+Kaggle does not currently support a mobile app. However, DataCamp does have a mobile app to learn data science and practice coding. It is available for iOS and Android.
+Does Kaggle use my CPU?
+Kaggle Kernel is a free Jupyter notebook server that can integrate GPU. It allows you to process machine learning operations on cloud computers instead of doing it on your own computer, in a similar way to DataCamp Workspace that works on the browser, using cloud-based resources as opposed to your local machine. 
+Where is my notebook output in Kaggle?
+In order to access Kaggle’s notebook outputs, you must first commit your notebook. You can do this by clicking the “Save Version” button on the top left of the notebook. After committing your notebook, two kernels will continue to work. The first one is the one that you are editing at the moment, and the second is the background kernel, which you committed. The kernel running in the background will create ready-to-download output files. Interactive notebooks will not save files. After the kernel in the background is finished, click on the back button on the top left to go to the page with the following tabs: Notebook, Code, Data, Output, and Comments. When you switch to the output tab, you will see that the output files are ready for download.
+Where to start in Kaggle?
+If you are a beginner, you can start by participating in the competitions in the “Getting Started” category in the competitions section. You can also review other people's notebooks. If you are at a more advanced  level of expertise, you can start directly by participating in active competitions.
+When does Kaggle reset the GPU quota?
+The GPU quota is renewed every Saturday. You can check your remaining GPU quota in the GPU section by going to the Account tab in your profile. This section shows your private data storage, and the GPU and TPU quota.
+Where to find Kaggle winning solutions?
+When you click on the discussion tab from the competitions page, you will see many discussion topics about the competitions. The discussion topic with the most upvotes is at the top and the topic with the most votes is the winner, with the solution explanation and the link to the winning notebook. 
+Kaggle is a data science competition platform and online community of data scientists and machine learning practitioners. Owned by Google, it is currently the best platform that connects the machine learning and data science community.
+Kaggle was launched in 2010 with the goal of becoming the leading platform for hosting data science competitions. It quickly became a hub for businesses and academic researchers, who shared their intricate datasets and complex challenges. This attracted a global community of data scientists who were eager to use their expertise to create optimal models and solutions.
+Over the years, Kaggle has evolved remarkably, expanding offerings even as its competitions remained foundational. It introduced a vast public dataset cataloging multiple industries and interests, making it a multi-dimensional landscape. It promoted a culture of collaboration among professionals by providing platform tools and spaces for sharing code, methodologies and insights, leading to the emergence of dynamic discussion forums that became essential resources for users to discuss trends, troubleshoot issues and exchange novel ideas.
+Furthermore, Kaggle acknowledged the need for continuous learning in the ever-evolving data science domain. To address this, they integrated extensive educational resources, tutorials and courses for both beginners and seasoned experts.
+What Is Kaggle Used For?
+Kaggle is a dynamic platform that empowers individuals to acquire knowledge and skills in the field of data science. Kaggle’s competitions are an excellent starting point for those seeking practical experience as they present real-world problems that require innovative solutions.
+In addition, Kaggle offers a comprehensive selection of datasets across multiple industries, which are invaluable for both research and learning. Working with authentic datasets can be a transformative experience for many individuals seeking to enhance their data literacy.
+Moreover, Kaggle fosters a strong sense of community among its users. The platform’s notebooks showcase diverse coding styles and analytical strategies, inspiring a wealth of tutorials and inventive solutions. The forums are a hub of stimulating discussions and lively debates, making Kaggle an engaging and stimulating environment for data enthusiasts. 
+Benefits of Kaggle
+Beyond the competitive aspect, Kaggle presents an extensive database of datasets. Covering a broad spectrum of industries, these datasets have become instrumental for research, hands-on practice and insights generation. The practical experience of engaging with datasets on Kaggle allows users to grasp the nuances of data manipulation.
+Perhaps what gives Kaggle its greatest benefit is its vibrant community — a collaborative space where data enthusiasts from around the globe exchange ideas, seek guidance and share solutions. This collective knowledge-sharing has established Kaggle’s reputation as a go-to hub for data science exploration and collaboration.
+ 
+How to Compete in Kaggle Competitions
+For those who may find Kaggle competitions daunting, rest assured that the knowledge and potential rewards are well worth the effort. To begin, create an account and explore the vast world of data science offered by Kaggle.
+Selecting a competition that aligns with your interests and abilities is essential. Before diving in, make sure you have a solid grasp of the problem statement and evaluation metrics. Next, conduct data exploration to identify patterns and generate hypotheses.
+Modeling is at the heart of the process, where data science theories are tested against real-world challenges. You’ll need to carefully choose, train and validate algorithms until you’ve developed a robust and reliable model.
+Once your model is ready, you can confidently submit your forecasts and eagerly await your placement on the leaderboard. You can then use the model to make predictions on new data and evaluate its performance. As data accumulates, you can also update the model to make it more accurate and reliable.
+What is Kaggle, Why I Participate, What is the Impact?
+Kaggle is an AirBnB for Data Scientists – this is where they spend their nights and weekends. It’s a crowd-sourced platform to attract, nurture, train and challenge data scientists from all around the world to solve data science, machine learning and predictive analytics problems. It has over 536,000 active members from 194 countries and it receives close to 150,000 submissions per month. Started from Melbourne, Australia Kaggle moved to Silicon Valley in 2011, raised some 11 million dollars from the likes of Hal Varian (Chief Economist at Google), Max Levchin (Paypal), Index and Khosla Ventures and then ultimately been acquired by the Google in March of 2017. Kaggle is the number one stop for data science enthusiasts all around the world who compete for prizes and boost their Kaggle rankings. There are only 94 Kaggle Grandmasters in the world to this date.
+Do you know that most data scientists are only theorists and rarely get a chance to practice before being employed in the real-world? Kaggle solves this problem by giving data science enthusiasts a platform to interact and compete in solving real-life problems. The experience you get on Kaggle is invaluable in preparing you to understand what goes into finding feasible solutions for big data.
+Kaggle enables data scientists and other developers to engage in running machine learning contests, write and share code, and to host datasets. The types of data science problems posted on Kaggle can be anything from attempting to predict cancer occurrence by examining patient records to analyzing sentiment to evoke by movie reviews and how this affects audience reaction.
+Different sources post projects on this trailblazing platform. While some are just for educational purposes and fun brain exercises, others are genuine issues that companies are trying to solve. Kaggle makes the environment competitive by awarding prizes and rankings for winners and participants. The prizes are not only monetary but can also include attractive rewards such as jobs or free products from the company hosting the competition.
+Monetary prices are exciting to most Kagglers. For instance, Home Depot was offering a winning prize of a whopping $40,000 in search of an algorithm to improve search results on homedepot.com. For most data science enthusiasts, this innovative website is not only a monetary resource, but it is also an indispensable learning tool that helps improve the experience, gain knowledge, elevate and enhance the skills, and learn from mistakes by resubmitting the code. It is the perfect platform to practice consistently.
+The Kaggle community is growing fast. There are currently over one million Kaggle members (Kagglers). This data community has submitted above four million learning models to different competitions. Kaggle users have shared over one thousand datasets, more than 170,000 forum posts and over 250 kernels. According to the founder, this incredibly fast growth can be attributed to high-quality content, data, and code shared by Kagglers.
+Most Kaggle users are committed and active hence the 4,000 forum posts per month and more than 3,500 competition submissions on a daily basis. This platform is the place to be for data scientists and machine learning engineers worldwide.
+Why is Kaggle Worth Your Time?
+1.	Interesting and challenging projects where contributors can learn and practice
+Kaggle competitions involve solving challenging and interesting problems. Companies post projects to numerous contributors. It especially a great place for beginners who are just trying to break into the data science field. Aside from the competitions that are open to the general public, Kaggle also has private competitions which are only open to top rated participants (Kaggle Masters).
+2.	Insightful discussions with industry leaders and learned experts
+Apart from the projects, Kaggle also consists of live discussions between numerous people on the platform. Such forums are very interesting, stimulating and informative. Through these discussions, you can either seek advice from others or offer advice to people who are dealing with issues you understand
+3.	Kaggle offers its audience a chance to get into the biggest data science community in the world
+This platform is trusted by some of the largest data science companies of the world such as Walmart, Facebook and Winton Capital. On Kaggle, data scientists get exposure and a chance to work on problems faced by big companies in real-time. While it is not a guarantee, there is always the chance that the company will be impressed enough to recruit.
+Kaggle Founder
+This data science platform is the brain Child of Anthony Goldbloom, a brilliant 28-year-old econometrics expert. His objective was to bring large and open data to the masses through crowdsourcing. According to Goldbloom, Kaggle has united data scientists and businesses in a meaningful way. His concept did not receive sufficient backing in Australia initially, and then he decided to relocate to Silicon Valley in the United States. In a recent tech conference, Goldbloom expressed his surprise at how much talent is available and was inaccessible to companies before the inception of Kaggle.
+How Kaggle Works
+The host of the competition is in-charge of preparing the data and preparing a detailed description of the problem at hand. To make it more convenient for hosts, Kaggle offers an additional consulting service that can help prepare data and describe the problem in the best possible format.
+The participants who compete for projects submit their models with a variety of techniques. All the work is shared on the platform through detailed Kaggle scripts with the intention of inspiring new ideas to achieve better benchmarks. In most Kaggle competitions, submissions are scored immediately and clearly summarised publicly on the live leader-board.
+Competitors are not given a single chance at solving a problem. Before the deadline expires, the competitors are allowed to make revisions on their submissions as they deem fit. This fuels competitors’ motivations to consistently innovate, be creative and polish their skills to produce better, elegant and effective solutions. Allowing for revisions elevates the level of accuracy and precision as well.
+When the deadline for a competition expires, the host pays the prize money to the winner. Hosts have the sole ownership and royalty-free license to use the winning entry any way they want with all intellectual property.
+How the Winner is Selected
+The host will screen participants depending on where they are placed on the leader-board. Their final scripts and also the content of the scripts submitted. Most hosts take the prerogative to reach out to strong contenders and arrange interviews.
+Do Kaggle Projects have any Real impact
+One of its biggest and most recognized projects is one by Heritage Health which offered a remarkable cash price of $3 million. Competitions hosted on Kaggle have had far-reaching impacts such as enhancing and enabling state of the art HIV/AIDS research and improving traffic forecasting.
+Several informative academic papers have been written and published on the basis of the findings generated through Kaggle contributions. Essentially Kaggle has given companies the opportunity to seek solutions from the best data scientist in the world and to have external pairs of eyes to look at the problems they are trying to solve.
+If you’re jumping into the tech industry or have been in it for a while, you would have heard of Kaggle. It is a data science competition platform which is aimed at data scientists and machine learning enthusiasts.
+The online platform aims to guide users in their professional careers to reach their goals in their data science or machine learning journey with the powerful tools and resources it provides.
+As people are trying to improve and progress in their careers, you will see a lot of people flock to online courses, competitions, and more. Kaggle is an amazing platform for people to test themselves, throw themselves in the deep end and come face to face with the reality of their skillset. 
+Many people have built projects on the Kaggle platform, having access to a variety of datasets, with great resources such as free access to NVIDIA K80 GPUs in kernels. The question we are going to pose today is ‘Are Kaggle Competitions Useful for Real-World Problems?’.
+A question was raised on Quora: should I invest my time participating in Kaggle or working on interesting side projects? Which will be more beneficial for my career?
+With a variety of responses, but as you can see in the image screenshot below explains the answer to your question. 
+Engineers and designers at Kaggle work hard behind the scenes to make it easy for our 5 million data scientist users to focus on learning and improving their deep learning models instead of ML ops like environment setup and resource provisioning.
+Kaggle’s community comes to the platform to learn and apply their skills in machine learning competitions. To do this, our users use Kaggle Notebooks, a hosted Jupyter-based IDE.
+Our mission is to help the world learn from data, so we strive to make powerful resources available to our global community at no cost via Kaggle Notebooks. This includes NVIDIA P100 GPUs. Tens of thousands of users train deep learning models with GPUs on Kaggle every month, so ensuring the experience is a good one is key.
+When making accelerators available to our users, we prioritize two things:
+•	Maintaining a fast, no-setup experience so users can start writing code within seconds
+•	Making efficient use of resources so we can extend them to as many users as possible
+Achieving this has been no simple feat. In the rest of this post, I’ll describe a sampling of the engineering and design work our team has done to make this possible.
+A fast, no-setup user experience
+Kaggle Notebooks come with popular data science packages like TensorFlow and PyTorch pre-installed in Docker containers (see the Python image GitHub repo) that run on Google Compute Engine VMs. Our engineers maintain these Docker images so that our users don’t need to worry about installation and dependency management, a huge barrier to getting started with data science.
+We release updates to our images about every two weeks. This means users always have easy access to the latest package versions which is important in a fast evolving domain such as machine learning.
+So that our users have a consistent, reliable experience using GPUs, we have also implemented a suite of tests that runs automatically every hour to catch any regressions in performance. 
+Reproducibility is also important to a fast, no setup user experience. By default, a notebook will always use the Docker image version that it was created with so that code that runs today will still run months later without any special effort. Users also have the option to refer to the latest available image in case they want to make sure they can access new libraries or library versions. 
+Given this setup, we have very, very large Docker images (~30GBs) for which we maintain many versions (over 150 so far at a total size of over 1.5TBs). This frequently risks degrading the user experience (e.g., pulling a full image can take around 10 minutes whereas we want our users to be able to begin writing code within seconds) so we’ve also made investments in reducing this pain point. 
+For example, we now track which libraries are actually used by our community and automatically remove little-used ones. We’ve made other optimizations that together allow a notebook session to start within a matter of seconds.
+Finally, we recently made our Docker images compatible with the Deep Learning VM images used by Cloud AI Notebooks so that users could easily export their notebook and its dependencies to GCP. This allows our users to pay for even more powerful compute without running into breaking changes.
+Efficient use of resources
+Providing access to GPUs at no cost to our users is an amazing thing, but our ability to do so isn’t unlimited. To make GPUs available to as many people as possible while maintaining a smooth user experience, our team has undertaken various wastage mitigation measures.
+Recently, we re-architected the backend service that provisions sessions for thousands of concurrent notebooks. One of the important new features we implemented was autoscaling for our VM pools. This allowed us to automatically keep a warm pool of GPU VMs at a capacity that’s a percentage above actual demand as opposed to some fixed size. Ultimately, this helped to reduce our costs by 36% while ensuring our users almost never end up in queues waiting for a machine to become available.
+Get started with GPUs on Kaggle
+Kaggle is a great place to learn how to train deep learning models using GPUs. We have a number of Courses, series of lessons and interactive notebooks, including Deep Learning. 
+You can apply what you learn in a machine learning Competition, for example our ongoing Getting Started NLP Competition to predict which tweets are about real disasters or not.  
+Finally, you can browse any of the over 30,000 public GPU notebooks shared on Kaggle. Then, simply click the “Copy & Edit” button to begin editing and running code. 
+Credit Card Fraud Detection
+This dataset helps companies and teams recognise fraudulent credit card transactions. The dataset contains transactions made by European credit cardholders in September 2013. The dataset presents details of 284,807 transactions, including 492 frauds, that happened over two days.
+Recently, it released a simulator for transaction data as part of the practical handbook on machine learning for credit card fraud detection. 
+European Soccer Database
+It is the ultimate soccer dataset for data analysis and machine learning. The dataset contains 25,000+ matches, 10,000+ players, 11 European countries with their lead championship, seasons 2008 to 2016, players and teams’ attributes sourced from EA Sports’ FIFA video game series, including weekly updates, team line up with squad formation (X, Y coordinates), betting odds from up to 10 providers, detailed match events (goal types, corner, possession, fouls, etc.) for 10,000+ matches.
+Avocado Prices
+The dataset shows the historical data on avocado prices and sales volume in multiple US markets. The information has been generated from the Hass Avocado Board website. It represents weekly 2018 retail scan data for national retail volume (units and price, along with region, types (conventional or organic), and Avocado sold volume. The dataset can be applied to other fruits and vegetables across geographies. 
+IBM HR Analytics Employee Attrition & Performance
+Created by IBM data scientists, this fictional dataset is used to predict attrition in an organisation. It uncovers various factors that lead to employee attrition and explores correlations such as “a breakdown of distance from home by job role and attrition,’ or ‘comparison of average monthly income by education and attrition.’ 
+Red Wine Quality 
+Red wine quality is a clean and straightforward practice dataset for regression or classification modelling. The two datasets available are related to red and white variants of the Portuguese ‘Vinho Verde’ wine. The information in this dataset includes fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH and others. The dataset is also available on the UCI machine learning repository.
+Medical Cost Personal Datasets
+This dataset is used for forecasting insurance via regression modelling. The dataset includes age, sex, body mass index, children (dependents), smoker, region and charges (individual medical costs billed by health insurance). The dataset is also available on GitHub. 
+Open Food Facts 
+This is a free, open, collaborative database of food products worldwide, with ingredients, allergens, nutrition facts and all the tidbits of information found on product labels. The database is a part of Google’s Summer of Code 2018. 5000+ contributors have added 600K+ products from 150 countries using an app or their camera to scan barcodes and upload pictures of products and their labels. 
+Machine Learning & Data Science Survey
+Kaggle conducted an industry-wide survey in 2017 to establish a comprehensive overview of the data science and machine learning landscape. The survey received over 16K responses, gathering information around data science, machine learning innovation, how to become data scientists and more. You can find the kernels used in the report here. 
+Titanic
+The Titanic dataset consists of original data from the Titanic competition and is ideal for binary logistic regression. The dataset contains information about the passenger’s id, age, sex, fare etc. The Titanic competition involves users creating a machine learning model that predicts which passengers survived the Titanic shipwreck. 
+Annotated Corpus for Named Entity Recognition
+This dataset is extracted from the GMB (Groningen Meaning Bank) corpus, tagged, annotated and built specifically to train the classifier to predict labelled entities such as name, location, etc. It gives you a broad view of feature engineering and helps solve business problems like picking entities from electronic medical records, etc.
+How to Participate in a Kaggle Competition
+
+Kaggle is the first place to go for anyone who studies machine learning development. This interactive online platform provides hundreds of databases and tutorials that you can use to kick-start your ML career.
+But what the website is the most famous for are its competitions. It can be hard for a newcomer to orient themselves in the interface and understand where to get started. So in this post, we will get you started with your first Kaggle competition!
+A few words about Kaggle competitions
+Kaggle competitions are machine learning tasks made by Kaggle or other companies like Google or WHO. If you compete successfully, you can win real money prizes.
+Competitions range in types of problems and complexity. You can take part in one even if you’re a beginner. However, advanced competitions are much more interesting, and a leading place in a competition is a great addition to your machine learning engineer resume.
+Competitions are held in three different formats.
+Simple Competitions
+These are your standard Kaggle competitions. You access data, build a model, make a submission. Then, your results are checked by the hosts of the competition and you are attributed a score on the leaderboard. The majority of competitions on Kaggle follow this format.
+Two-stage Competitions
+In two-stage competitions, every challenge has two parts. Stage 2 offers a new test dataset that is released at the start of the stage. To access it, you have to make a submission at stage 1. To participate in such competitions successfully, you need to read the rules carefully and keep an eye on the timeline.
+Code Competitions
+In code competitions, submissions are made from inside of a Kaggle Notebook (we explain later on what it is). These competitions, in a way, are fairer because all the users have the same hardware. Code competitions may have constraints on the Notebooks you can submit, for example, CPU or GPU runtime, ability to use external data, and access to the internet. So reading the rules here is also very important.
+In Kaggle competitions, everyone competes in teams of one or more people. Every team must have a team leader. You can invite your friends or join a team of other users via the Team tab in the competition. Your team can also merge with another team, for example, if you realize that submitting a model on your own is too challenging. However, you can only do it until a certain deadline. If there are any other details you would like to clarify, feel free to explore the Kaggle Competitions page.
+How to use Kaggle to compete
+Let’s learn how to use the platform. After you register, you get redirected to a personalized feed with posts, competitions, and discussions that might interest you. From here, you can go to the Compete tab.
+
+Click on the Titanic competition. All newly registered users are invited to participate in a simple competition to understand how Kaggle works. Even if you don’t know how to code, it is not a problem.
+In the Titanic competition, you need to use machine learning to create a model that predicts which passengers survived the Titanic shipwreck. You are asked to build a predictive model that answers the question: “which passengers were more likely to survive?” using data like name, age, gender, socio-economic class.
+
+Every competition has these tabs:
+•	In Data, you will find the datasets to train and test your model.
+•	Notebooks are your workspace. They contain tutorials, blog posts, documentation. They can also execute code without you installing anything.
+•	In Discussion, you can communicate with other people who participate in the competition, ask questions, and give advice.
+•	The Leaderboard shows the score of participants in the competition.
+•	Datasets include additional datasets that have been added by participants.
+•	Finally, Rules contain the rules of the competition.
+If you want to participate, click Join the Competition.
+How to make your first submission
+Now let us learn how to participate in a competition step-by-step.
+1. Download the data
+If you want to do some preliminary exploratory analysis before starting a kernel or just have the files on your computer, go to Data, scroll down, and click Download all.
+2. Read the rules
+Yes, it’s important. For example, sometimes rules can impose limitations on the use of data. You need to follow those rules to avoid being disqualified, especially for those competitions that are conducted by third-party organizations.
+3. Study the open kernels
+You can access other people’s public notebooks and see how they approached the problem. Just go to the tab Notebook in the competition. It is definitely useful to study the best examples that got to the top 1%-3%. Solutions that did not win are also handy because you can inspect them and search for what needs to be improved.
+4. Create your kernel
+You can build models on Kaggle Kernels. This customizable Jupyter Notebooks environment with free GPUs is quite convenient, has libraries pre-installed, and allows you to generate a CVS prediction file for submission.
+To create your own Kernel, go to the Notebooks tab and click New Notebook. Easily add your Data to the submission by clicking Add Data -> Competition Data -> Add. No need to upload anything.
+If you work with other people, you can easily share your Notebook with your colleagues by clicking the Share button. The Notebook allows you to switch between different versions of the submission and safely store them. You can write up to 20GB to the directory that gets preserved. 
+5. Make a submission
+The submissions on Kaggle are in CSV and usually have two columns: an ID column and a prediction column. Upload your submission and receive an accuracy score.
+To try out submitting on Kaggle, follow this tutorial. It even provides you with code; no need to write anything.
+6. Check the leaderboard
+It’s always thrilling to see who won! See how your model ranks on the leaderboard. You can win a gold, silver, or bronze medal that will increase your reputation on the platform. In advanced competitions, it is possible to win good money.
+
+7. Improve your score
+It is usually possible to improve your score and go even higher on the leaderboard. Read discussions, ask questions, and get insights from other competitors to learn and improve.
+How to find a contest for beginners on Kaggle
+If you don’t have much experience with machine learning, it can be hard to find the competitions suitable for beginners. I recommend you use filtering.
+
+The categories that interest us now are Getting Started and Playground. Other categories offer much more advanced tasks that might seem discouraging at the start. But let’s briefly talk about all of them:
+•	Featured. Competitions organized by third-parties offer generous prizes. Usually, the rolling window is 2-3 months.
+•	Research. Research-oriented tasks have little to no prize money, but they are good for boosting your skills.
+•	Recruitment. Companies that want to hire the best of the best can host such competitions to hire data scientists.
+•	Getting Started. These competitions are meant for those who are just starting to learn ML for practice. Usually, they don’t have any prize pools but sometimes can offer small rewards. Making submissions for Getting Started is easier because there are plenty of tutorials and example submissions online. You can enter them at any time.
+•	Masters. Kaggle has tiers, and being a Kaggle master is quite prestigious. It can even be considered by your employer in the hiring process. Sometimes Kaggle hosts competitions where the best of the best compete against each other.
+•	Playground. These submissions often have to do with games and are mostly for fun. They are suitable for beginners who have gained a little bit of experience and want to grow.
+•	Analytics. This category is dedicated to data analysis.
+However, if you apply the filter Getting Started, you will see only a few competitions there. Once you get some experience, feel free to explore more options. It is a good idea to use search to find posts and discussion topics where people share their opinion on the competitions that are suitable for beginners. Here is what I would recommend:
+•	Learn to predict housing prices with linear regression.
+•	Predict whether the applicant is capable of repaying the loan.
+•	Experiment with computer vision and teach the machine to recognize hand-written digits.
+•	Predict keypoint positions on face images to analyze facial expressions or track faces in images and video.
+•	Make the first steps in sentiment analysis with Google’s Word2Vec.
+•	Practice decoding Morse code in audio files.
+•	Explore an unusual competition where your rival is the computer.
+•	Learn to use Tensor Processing Units for flower classification.
+•	Use GANs to make art.
+One step above in difficulty:
+•	Create an algorithm that distinguishes dogs from cats.
+•	Teach your algorithm to classify leaves.
+•	Learn to predict the duration of a taxi trip.
+•	Practice regression skills with an approachable ML database.
+•	Create an AI to play against others in a simple game.
+•	Practice more building AI gaming agents.
+If you have any competitions to add, feel free to send your idea to us, and we will include it in the post.
+What kind of problems will I deal with in Kaggle competitions?
+Kaggle competitions are diverse but, for the most part, they deal with one of the following problems:
+•	Classification;
+•	Regression;
+•	Computer vision;
+•	Image processing;
+•	Natural language processing.
+The choice of the algorithm depends on the problem that you’re dealing with. It is tempting to solve everything by using only neural networks and deep learning, and quite often they do guarantee good results. But not all the time. Sometimes sticking to ANNs is just inefficient. So don’t be afraid of simple solutions to simple problems and choose a machine learning technique wisely.
+How to practice before the contest?
+Now let us talk about what you can do before participating in a contest.
+1.	First of all, you need to choose a language: the competitions are usually hosted either in R or Python, sometimes in other languages like Julia, but mostly Python.
+2.	Once you have chosen the language, you can start practicing on real datasets. I recommend the UCI Machine Learning repository. Try to solve a simple problem like classification or clustering and see what happens. The datasets on UCI are grouped by the problem so it’s quite easy to orient yourself. Don’t forget to split the data set into a training set and test set and then also split the test set into a ‘public’ and ‘private’ set because that is how competitions on Kaggle are checked. For more information about cool ML datasets, you can also explore our blog.
+3.	In the Notebooks section on Kaggle or on GitHub you will probably find a solution to any simple problem that you’re trying to solve, maybe even using the same dataset that you use. Hundreds of people before you were also trying to learn ML. Feel free to use their notebooks for inspiration so you can get good at interpreting the results.
+4.	Practice on simple Kaggle contests that we have mentioned. Don’t start with the ones that offer hundreds of dollars as a prize. Use the notebooks and tutorials published by other participants to gradually grow your skills while also familiarizing yourself with the particularities of the platform. After your submissions start being graded high (top 10%-25%) in the leaderboard, you can start thinking of Featured or Research competitions.
+What to do if I don’t have amazing hardware to use for Kaggle competitions?
+Effective hardware that doesn’t struggle with computations simplifies the work of a data scientist a lot, but it’s not always possible to upgrade your hardware.
+First of all, you can run Kaggle Kernels with GPU to speed up the training of deep learning models. Learn how to set it up. A great advantage of this option is that it is free. However, judging by some comments, this option is not always working. So, here are some other options.
+If you need more computer power, you can upgrade to Google Cloud AI Notebook directly in the Notebook. You can explore some options for free and also get a $300 credit. But when working with large amounts of data (for example, training a deep learning model), you will need to upgrade soon, and it’s quite costly. That is why some prefer to set up servers elsewhere. In that case, you will have to set up the environment on your own computer, and one of the most popular choices is Anaconda. If you decide to go for this option, use the tutorial by Faizan Ahemad on how to install it.
+Another popular option is to rent computer power from AWS, Microsoft Azure, Digital Ocean, or something similar. Platforms that are recommended by many specifically for deep learning are FloydHub and Crestle.ai.
+Final words
+Now you know everything you need to make your first submission on Kaggle. The only thing left is to start.
+If you are looking for more information about machine learning, feel free to explore our blog. Write to us on Twitter or use the form below if you have any questions or suggestions about what to cover next. Good luck, and may the odds be ever in your favor!
+Kaggle, the largest global community of data scientists, conducted the 5th annual industry-wide survey that presented a truly comprehensive view of the state of data science and machine learning. A total of 25,973 responses were collected from participants from over 60 countries. Kaggle also launched the Data Science Survey Challenge in which the goal was to present a rich story about the data science and machine learning community.  
+I have always been interested in the analytics competitions on Kaggle, having won 4 different analytics competitions in the past, I decided to dig deeper into this competition as well. I got the opportunity to team up with my colleague, a good friend, and another Kaggle Grandmaster: Kunhao Yeh. We participated as Team H2O (Shivam Bansal and Kunhao Yeh) and developed a comprehensive analytics submission on the topic – data science adoption in 2021. 
+The whole effort and time spent on this competition were amazing. We were delighted to note that our team was selected as the winner of the competition. 
+In this blog, we have highlighted our story of why we choose this topic, how we curated our solution and finally a few tips on effective storytelling with data. 
+As part of our regular job as customer-facing data scientists, we interact with several organizations across different countries and industries. This involves companies of varying sizes, different revenues, and different data maturity levels. Some are at a very early stage and some are highly advanced. A common observation is that “many organizations are still at very early stages in their AI adoption”. If we have to categorize them in different groups, it can be analogous to stages of plant growth: 
