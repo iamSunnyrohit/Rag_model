@@ -25,6 +25,13 @@ Tested on Mac mini (Apple Silicon) using a standardized technical query:
 
 > *Note: Metrics were calculated using `benchmark.py` to measure 'Time to First Token' and generation speed.*
 
+### 🕵️ Observability & Traceability
+Integrated **Arize Phoenix** to provide deep visibility into the RAG lifecycle:
+- **Operation Tracing**: Visualized the sequence of events from user query to final LLM response.
+- **Span Analysis**: Measured individual latencies for the BM25 and Vector retrieval steps.
+- **Local MLOps**: Used OpenInference instrumentation to capture and log system telemetry without external cloud dependencies.
+
+  
 ## 🔍 Engineering Challenges & Solutions
 - **Dependency Resolution**: Resolved critical version conflicts between LangChain 0.3 and legacy packages by implementing a manual retrieval chain.
 - **Retrieval Precision**: Tuned the system to overcome "Information not found" errors by broadening search parameters (k=6) and implementing keyword-based boosting.
