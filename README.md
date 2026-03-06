@@ -20,8 +20,8 @@ Tested on Mac mini (Apple Silicon) using a standardized technical query:
 
 | Model | Response Time | Tokens Per Second (TPS) | Accuracy (1-10) |
 | :--- | :--- | :--- | :--- |
-| **Llama 3.2 (3B)** | 20.88 s | 25.71 TPS | [Your Score] |
-| **Mistral (7B)** | 26.86 s | 12.73 TPS | [Your Score] |
+| **Llama 3.2 (3B)** | 20.88 s | 25.71 TPS | 8 |
+| **Mistral (7B)** | 26.86 s | 12.73 TPS | 9 |
 
 > *Note: Metrics were calculated using `benchmark.py` to measure 'Time to First Token' and generation speed.*
 
